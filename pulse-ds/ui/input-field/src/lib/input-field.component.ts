@@ -15,14 +15,14 @@ import {
 import { CommonModule } from '@angular/common';
 import { FormsModule, NG_VALUE_ACCESSOR } from '@angular/forms';
 import { VC_FORM_CONTROL, VcFormControl } from '@pulse-ds/ui/core';
-import { VcTag } from '@pulse-ds/ui/tag';
-import { VcTagItem } from './input-field.types';
+import { VTag } from '@pulse-ds/ui/tag';
+import { VTagItem } from './input-field.types';
 import { VcLabel } from '@pulse-ds/ui/label';
 
 @Component({
     standalone: true,
     selector: 'vc-input-field',
-    imports: [CommonModule, FormsModule, VcLabel, VcTag],
+    imports: [CommonModule, FormsModule, VcLabel, VTag],
     templateUrl: './input-field.component.html',
     styleUrl: './input-field.component.scss',
     providers: [
@@ -86,7 +86,7 @@ export class VcInputField implements VcFormControl, OnInit {
 
   @Input() maxLength: number | undefined;
 
-  @Input() tags: VcTagItem[] = [];
+  @Input() tags: VTagItem[] = [];
 
   @Input() displayFormatter: ((value: any) => string) | null = null;
 
@@ -108,7 +108,7 @@ export class VcInputField implements VcFormControl, OnInit {
 
   @Output() iconRightClick: EventEmitter<Event> = new EventEmitter<Event>();
 
-  @ViewChildren('tagElement') tagViewChildList!: QueryList<VcTag>;
+  @ViewChildren('tagElement') tagViewChildList!: QueryList<VTag>;
 
   @ViewChild('inputField') inputViewChild!: ElementRef;
 

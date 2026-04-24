@@ -1,12 +1,12 @@
 import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { VcTag } from '@pulse-ds/ui/tag';
+import { VTag } from '@pulse-ds/ui/tag';
 import { CapitalizeService } from '@pulse-ds/ui/core';
 
 @Component({
     standalone: true,
     selector: 'vc-legacy-table',
-    imports: [CommonModule, VcTag],
+    imports: [CommonModule, VTag],
     templateUrl: './table.component.html',
     styleUrl: './table.component.scss'
 })
