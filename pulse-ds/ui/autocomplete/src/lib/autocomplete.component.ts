@@ -146,7 +146,7 @@ export class VcAutocomplete implements AfterContentInit, OnDestroy {
 
   autocompleteInput: string = '';
   listboxOptions: VcSelectOption[] = [];
-  scrollStrategy = this._overlay.scrollStrategies.block();
+  scrollStrategy: any;
 
   menuOpen: boolean = false;
   menuWidth: string | undefined;
@@ -159,7 +159,9 @@ export class VcAutocomplete implements AfterContentInit, OnDestroy {
   @ViewChild(VcListbox) vcListboxViewChild!: VcListbox;
   @ContentChildren(VcOption) options!: QueryList<VcOption>;
 
-  constructor(private _overlay: Overlay) {}
+  constructor(private _overlay: Overlay) {
+    this.scrollStrategy = this._overlay.scrollStrategies.block();
+  }
 
   ngAfterContentInit(): void {
     this.optionsChangeSubscription = this.options.changes.subscribe((value) => {
