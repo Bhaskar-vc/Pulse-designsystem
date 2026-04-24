@@ -5,6 +5,7 @@ const pulseTheme = create({
   base: 'light',
   brandTitle: 'Pulse Design System',
   brandUrl: 'https://github.com/Bhaskar-vc/Pulse-designsystem',
+  brandImage: './VC-logo.svg',
   brandTarget: '_blank',
 
   // Colors
