@@ -10,7 +10,7 @@ import {
 } from '@angular/core';
 
 import { buttonVariants } from './button.variants';
-import { VSpinner, SpinnerTheme } from '@vantagecircle/ui/spinner';
+import { VSpinner, SpinnerTheme } from '@pulse-ds/ui/spinner';
 import {
   ButtonColor,
   ButtonRadius,

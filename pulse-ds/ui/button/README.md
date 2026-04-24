@@ -1,3 +1,3 @@
-# @vantagecircle/ui/button
+# @pulse-ds/ui/button
 
-Secondary entry point of `@vantagecircle/ui`. It can be used by importing from `@vantagecircle/ui/button`.
+Secondary entry point of `@pulse-ds/ui`. It can be used by importing from `@pulse-ds/ui/button`.

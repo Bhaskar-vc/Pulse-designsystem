@@ -1,0 +1,75 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Getting Started" />
+
+# Pulse Design System
+
+The official Angular component library for Vantage Circle products.
+
+## Installation
+
+```bash
+npm install @pulse-ds/ui
+```
+
+For GitHub Packages, add to your project's `.npmrc`:
+
+```
+@pulse-ds:registry=https://npm.pkg.github.com
+```
+
+## Usage
+
+All components are **standalone** and can be imported directly:
+
+```typescript
+import { VButton } from '@pulse-ds/ui/button';
+import { VAlert } from '@pulse-ds/ui/alert';
+import { VTag } from '@pulse-ds/ui/tag';
+
+@Component({
+  standalone: true,
+  imports: [VButton, VAlert, VTag],
+  template: `
+    <v-alert type="success" title="Welcome!" message="Your account is ready."></v-alert>
+    <v-tag color="primary" variant="solid">Active</v-tag>
+    <v-button variant="solid" color="primary">Get Started</v-button>
+  `
+})
+export class WelcomeComponent {}
+```
+
+## Component Selectors
+
+| Prefix | Source |
+|--------|--------|
+| `v-` | New DS components (button, alert, tag, modal, etc.) |
+| `vc-` | Legacy components (select, input-field, label, etc.) |
+
+## Form Controls
+
+Components like `v-checkbox`, `v-dropdown`, `v-rating`, `v-slider`, `v-calendar`, and `v-segment` implement `ControlValueAccessor` — they work with both template-driven and reactive forms:
+
+```html
+<!-- Template-driven -->
+<v-rating [(ngModel)]="userRating" [interactive]="true" [max]="5"></v-rating>
+
+<!-- Reactive -->
+<v-calendar [formControl]="dateControl"></v-calendar>
+```
+
+## Tree-Shaking
+
+Each component is a **secondary entry point**. Only the components you import are included in your bundle:
+
+```typescript
+// Only button code is bundled
+import { VButton } from '@pulse-ds/ui/button';
+```
+
+## Browser Support
+
+- Chrome (latest)
+- Firefox (latest)
+- Safari (latest)
+- Edge (latest)

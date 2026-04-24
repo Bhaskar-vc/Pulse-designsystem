@@ -1,0 +1,58 @@
+/* Modal — Pulse Design System */
+
+:host { display: contents; }
+
+.modal-overlay {
+  position: fixed; inset: 0;
+  background: rgba(52,64,84,0.7);
+  backdrop-filter: blur(4px);
+  display: flex; align-items: center; justify-content: center;
+  z-index: 1000;
+  opacity: 0; pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+.modal-overlay.is-open { opacity: 1; pointer-events: all; }
+
+.modal {
+  background: #fff; border-radius: 12px; padding: 24px;
+  width: 400px; max-width: calc(100vw - 32px);
+  box-shadow: 0 20px 24px -4px rgba(16,24,40,.08), 0 8px 8px -4px rgba(16,24,40,.03);
+  display: flex; flex-direction: column; gap: 32px;
+  transform: scale(0.96) translateY(8px);
+  transition: transform 0.2s ease;
+  font-family: 'Inter', sans-serif;
+}
+.modal-overlay.is-open .modal { transform: scale(1) translateY(0); }
+
+.modal--wide { width: 560px; }
+
+.modal--centered .modal-content { align-items: center; text-align: center; }
+.modal--centered .modal-icon-row { justify-content: center; }
+
+.modal-content { display: flex; flex-direction: column; gap: 20px; }
+.modal-icon-row {
+  display: flex; align-items: flex-start;
+  justify-content: space-between; gap: 12px;
+}
+
+.modal-close {
+  width: 24px; height: 24px; flex-shrink: 0;
+  background: none; border: none; cursor: pointer; padding: 0;
+  color: #9d9dad; display: flex; align-items: center; justify-content: center;
+  border-radius: 4px; transition: color 0.15s, background 0.15s;
+}
+.modal-close:hover { color: #29294c; background: #f4f4f6; }
+
+.modal-text { display: flex; flex-direction: column; gap: 8px; }
+.modal-title { font-size: 16px; font-weight: 600; color: #29294c; line-height: 1.5; }
+.modal-body  { font-size: 14px; color: #707087; line-height: 1.6; }
+
+.modal-divider { border: none; border-top: 1px solid #eaeaed; margin: 0; }
+
+.modal-actions {
+  display: flex; align-items: center;
+  justify-content: space-between; gap: 12px;
+}
+.modal-actions--right    { justify-content: flex-end; }
+.modal-actions--centered { justify-content: center; }
+.modal-actions--stacked  { flex-direction: column; }

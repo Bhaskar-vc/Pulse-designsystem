@@ -1,0 +1,25 @@
+<div class="steps" [class]="stepsClass" [attr.aria-label]="'Progress steps'">
+  @for (step of steps; track $index) {
+    <div class="step" [class]="stepClass(step)">
+      <div class="step-node">
+        @if (step.state === 'done') {
+          <svg class="step-check" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+            <path d="M2 7l3.5 3.5L12 3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        } @else if (step.state === 'error') {
+          <svg class="step-check" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+            <path d="M3 3l8 8M11 3L3 11" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        } @else {
+          {{ $index + 1 }}
+        }
+      </div>
+      <div class="step-text">
+        <span class="step-title">{{ step.title }}</span>
+        @if (step.desc) {
+          <span class="step-desc">{{ step.desc }}</span>
+        }
+      </div>
+    </div>
+  }
+</div>

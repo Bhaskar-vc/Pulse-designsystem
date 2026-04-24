@@ -1,0 +1,28 @@
+/* Button Group — Pulse Design System */
+
+:host {
+  display: inline-flex;
+}
+
+.btn-group {
+  display: flex;
+  flex-direction: row;
+}
+
+::ng-deep .btn-group-item {
+  border-radius: 0 !important;
+}
+
+::ng-deep .btn-group vc-button:first-child .btn-group-item {
+  border-top-left-radius: 6px !important;
+  border-bottom-left-radius: 6px !important;
+}
+
+::ng-deep .btn-group vc-button:last-child .btn-group-item {
+  border-top-right-radius: 6px !important;
+  border-bottom-right-radius: 6px !important;
+}
+
+::ng-deep .btn-group vc-button:not(:last-child) .btn-group-item {
+  border-right-color: transparent;
+}

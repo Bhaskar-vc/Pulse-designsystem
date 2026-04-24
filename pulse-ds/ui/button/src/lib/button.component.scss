@@ -1,3 +1,5 @@
 :host {
-  @apply w-auto h-auto flex;
+  width: auto;
+  height: auto;
+  display: flex;
 }

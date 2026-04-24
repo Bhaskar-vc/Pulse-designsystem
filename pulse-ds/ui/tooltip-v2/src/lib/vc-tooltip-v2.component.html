@@ -1,0 +1,11 @@
+<div #triggerWrapper class="vc-tooltip-trigger-wrapper">
+  <ng-container *ngTemplateOutlet="triggerTemplate"></ng-container>
+</div>
+
+<div
+  #tooltipWrapper
+  class="vc-tooltip-panel"
+  [class.visible]="show"
+>
+  <ng-container *ngTemplateOutlet="contentTemplate"></ng-container>
+</div>

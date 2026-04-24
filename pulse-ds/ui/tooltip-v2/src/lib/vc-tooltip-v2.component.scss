@@ -1,0 +1,32 @@
+:host {
+  display: inline-block;
+}
+
+.vc-tooltip-trigger-wrapper {
+  display: inline-block;
+  position: relative;
+}
+
+.vc-tooltip-panel {
+  position: fixed;
+  transform: translate(0, 0);
+  pointer-events: none;
+  background: #fff;
+  padding: 16px;
+  border-radius: 12px;
+  max-width: min(90vw, 360px);
+  width: max-content;
+  white-space: normal;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+  opacity: 0;
+  transition: opacity 200ms ease-in-out;
+  z-index: 9999;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+              0 4px 6px -2px rgba(0, 0, 0, 0.05);
+
+  &.visible {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}

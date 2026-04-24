@@ -1,0 +1,55 @@
+/* Label — Pulse Design System */
+
+:host {
+  display: flex;
+  width: fit-content;
+}
+
+.label-wrap {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2px;
+  width: fit-content;
+  margin-bottom: 4px;
+}
+
+.type-light {
+  color: #707087;
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16.8px;
+}
+
+.type-dark {
+  color: #29294c;
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 19.6px;
+}
+
+.type-bold {
+  color: #29294c;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 19.6px;
+}
+
+.required-star {
+  color: #D92D20;
+}
+
+.optional-text {
+  color: #707087;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16.8px;
+}
+
+.tooltip-icon {
+  display: inline-flex;
+  align-items: center;
+}

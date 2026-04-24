@@ -1,0 +1,136 @@
+:host {
+  display: block;
+  width: fit-content;
+}
+
+.btn {
+  min-width: 100px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  color: #fff;
+  padding: 5px 16px;
+  border: 1px solid transparent;
+}
+
+.disabled {
+  pointer-events: none;
+  cursor: not-allowed;
+}
+
+.file-upload-main-container {
+  width: 100%;
+
+  .file-upload-btn {
+    min-width: 100px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    color: #29294c;
+    padding: 5px 16px;
+    border: 1px solid #D0D5DD;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+
+    &:hover {
+      background: #f4f4f6;
+      border-color: #29294c;
+    }
+
+    &:focus-visible {
+      background: #f4f4f6;
+      border-color: #29294c;
+    }
+
+    &:active {
+      background: transparent;
+      border-color: #D0D5DD;
+    }
+
+    .file-upload-icon svg {
+      width: 20px;
+      height: 20px;
+      color: #5C6C7C;
+    }
+
+    &.btn-disabled {
+      pointer-events: none;
+      cursor: not-allowed;
+      color: #D0D5DD;
+
+      .file-upload-icon svg {
+        color: #D0D5DD;
+      }
+    }
+  }
+
+  .file-drag-drop-container {
+    width: 100%;
+    min-height: 245px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-radius: 12px;
+    box-shadow:
+      0px 20px 24px -4px rgba(16, 24, 40, 0.08),
+      0px 8px 8px -4px rgba(16, 24, 40, 0.03);
+
+    &.hide-wrapper {
+      padding: 0;
+      border-radius: 0;
+      box-shadow: unset;
+    }
+
+    .file-drag-drop-header-container {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .file-drop-area {
+      padding: 16px 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      justify-content: center;
+      align-items: center;
+      border: 1px dashed #D0D5DD;
+      border-radius: 8px;
+      transition-duration: 300ms;
+
+      &.highlight-drop-area {
+        background: #F9FAFB;
+        border-color: #7F56D9;
+      }
+
+      .file-drop-area-icon-container {
+        width: 60px;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #F2F4F7;
+        padding: 5px;
+        border: 6px solid #F9FAFB;
+        border-radius: 9999px;
+
+        svg {
+          width: 24px;
+          height: 24px;
+          color: #475467;
+        }
+      }
+
+      .file-drop-area-text-container {
+      }
+    }
+  }
+
+  input[type='file'] {
+    display: none;
+  }
+}

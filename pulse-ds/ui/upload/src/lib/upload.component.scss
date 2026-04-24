@@ -1,0 +1,60 @@
+/* Upload — Pulse Design System */
+
+:host { display: block; }
+
+.upload-zone {
+  border: 2px dashed #eaeaed; border-radius: 12px; padding: 32px 24px;
+  text-align: center; background: #fff; cursor: pointer;
+  transition: border-color .2s, background .2s;
+  position: relative; outline: none;
+  font-family: 'Inter', sans-serif;
+}
+.upload-zone:hover,
+.upload-zone:focus-visible { border-color: #9e77ed; background: #fdfaff; }
+.upload-zone.dragover      { border-color: #7f56d9; background: #f9f5ff; }
+.upload-zone.has-error     { border-color: #f04438; background: #fef3f2; }
+
+.upload-input {
+  position: absolute; opacity: 0; width: 100%; height: 100%;
+  top: 0; left: 0; cursor: pointer; z-index: 2;
+}
+
+.upload-icon {
+  width: 40px; height: 40px; margin: 0 auto 12px;
+  color: #9d9dad; display: flex; align-items: center; justify-content: center;
+  transition: color .2s;
+}
+.upload-zone.dragover .upload-icon { color: #7f56d9; }
+.upload-icon svg { width: 40px; height: 40px; }
+
+.upload-text { font-size: 14px; color: #29294c; margin-bottom: 4px; }
+.upload-text strong { font-weight: 600; color: #29294c; }
+.upload-text span   { color: #707087; font-weight: 400; }
+.upload-subtext     { font-size: 12px; color: #9d9dad; }
+.upload-error-text  { font-size: 12px; color: #f04438; margin-top: 6px; }
+
+/* File list */
+.file-list { margin-top: 16px; display: flex; flex-direction: column; gap: 8px; }
+.file-item {
+  display: flex; align-items: center; gap: 12px;
+  padding: 10px 14px; border: 1px solid #eaeaed;
+  border-radius: 8px; background: #fff;
+}
+.file-icon-wrap {
+  width: 40px; height: 40px; border-radius: 6px; flex-shrink: 0;
+  background: #f4f4f6; border: 1px solid #eaeaed;
+  display: flex; align-items: center; justify-content: center;
+}
+.file-icon-wrap svg { width: 20px; height: 20px; color: #707087; }
+.file-info { flex: 1; min-width: 0; }
+.file-name { font-size: 13px; font-weight: 500; color: #29294c; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.file-size { font-size: 12px; color: #9d9dad; margin-top: 1px; }
+.file-remove {
+  flex-shrink: 0; width: 28px; height: 28px; border-radius: 6px;
+  background: transparent; border: none; cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  color: #9d9dad; transition: background .12s, color .12s;
+}
+.file-remove:hover { background: #fee4e2; color: #f04438; }
+.file-status-done  { color: #039855; }
+.file-status-error { color: #f04438; }

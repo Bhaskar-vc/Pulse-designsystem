@@ -1,0 +1,70 @@
+/* Card — Pulse Design System */
+
+:host { display: block; }
+
+.card {
+  background: #fff;
+  border: 1px solid #eaeaed;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
+  font-family: 'Inter', sans-serif;
+}
+.card:hover:not(.card--flat):not(.card--disabled) {
+  box-shadow: 0 4px 16px rgba(16,24,40,.08);
+  border-color: #d0d5dd;
+}
+
+/* Image */
+.card-img { width: 100%; display: block; object-fit: cover; }
+.card-img-placeholder {
+  width: 100%; height: 180px;
+  background: linear-gradient(135deg, #eaeaed 0%, #d0d3dc 100%);
+  display: flex; align-items: center; justify-content: center;
+}
+
+/* Body */
+.card-body { padding: 20px; flex: 1; display: flex; flex-direction: column; gap: 8px; }
+.card-body-lg { padding: 28px; }
+
+/* Header elements */
+.card-eyebrow { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: .06em; color: #6941c6; }
+.card-title    { font-size: 16px; font-weight: 600; color: #101828; line-height: 1.4; }
+.card-title-sm { font-size: 14px; font-weight: 600; color: #101828; line-height: 1.4; }
+.card-title-lg { font-size: 20px; font-weight: 700; color: #101828; line-height: 1.3; }
+.card-desc     { font-size: 14px; color: #475467; line-height: 1.65; }
+.card-meta     { display: flex; align-items: center; gap: 8px; font-size: 12px; color: #98a2b3; }
+.card-meta-dot { width: 3px; height: 3px; border-radius: 50%; background: #d0d5dd; }
+
+/* Badge */
+.card-badge { display: inline-flex; align-items: center; gap: 4px; font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: 99px; border: 1px solid; }
+.card-badge-success { color: #027a48; background: #ecfdf5; border-color: #a6f4c5; }
+.card-badge-warning { color: #b54708; background: #fffaeb; border-color: #fec84b; }
+.card-badge-error   { color: #b42318; background: #fef3f2; border-color: #fecdca; }
+.card-badge-info    { color: #026aa2; background: #e0f2fe; border-color: #b9e6fe; }
+.card-badge-neutral { color: #344054; background: #f2f4f7; border-color: #d0d5dd; }
+
+/* Divider & Footer */
+.card-divider { height: 1px; background: #eaeaed; margin: 0; }
+.card-footer   { padding: 16px 20px; display: flex; align-items: center; justify-content: space-between; gap: 12px; background: #f9fafb; border-top: 1px solid #eaeaed; }
+.card-actions  { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; padding: 0 20px 20px; }
+
+/* States */
+.card--selected  { border-color: #7f56d9; box-shadow: 0 0 0 3px rgba(127,86,217,.12); }
+.card--disabled  { opacity: 0.5; pointer-events: none; }
+.card--clickable { cursor: pointer; }
+.card--flat      { box-shadow: none !important; }
+.card--flat:hover { border-color: #d0d5dd; }
+
+/* Sizes */
+.card--sm .card-body { padding: 14px; }
+.card--sm .card-title { font-size: 13px; }
+.card--sm .card-desc  { font-size: 13px; }
+.card--lg .card-body  { padding: 28px; }
+.card--lg .card-title { font-size: 20px; }
+
+/* Horizontal */
+.card--horizontal { flex-direction: row; }
+.card--horizontal .card-img-col { width: 160px; min-width: 160px; flex-shrink: 0; }

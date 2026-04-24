@@ -1,0 +1,89 @@
+/* Steps — Pulse Design System */
+
+:host { display: block; }
+
+.steps {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  font-family: 'Inter', sans-serif;
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  position: relative;
+  gap: 10px;
+}
+
+/* Connector line */
+.step:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  top: 18px; left: 50%;
+  width: 100%; height: 2px;
+  background: #e4e7ec;
+  z-index: 0;
+}
+.step.is-done:not(:last-child)::after { background: #3d4a5c; }
+
+/* Step node */
+.step-node {
+  width: 36px; height: 36px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 13px; font-weight: 700;
+  border: 2px solid #e4e7ec;
+  background: #fff; color: #98a2b3;
+  position: relative; z-index: 1;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+/* States */
+.step.is-done .step-node   { background: #12b76a; border-color: #12b76a; color: #fff; }
+.step.is-active .step-node { background: #fff; border-color: #12b76a; color: #12b76a; box-shadow: 0 0 0 4px rgba(18,183,106,0.12); }
+.step.is-error .step-node  { background: #fef3f2; border-color: #f04438; color: #f04438; box-shadow: 0 0 0 4px rgba(240,68,56,0.1); }
+
+/* Text */
+.step-text  { display: flex; flex-direction: column; align-items: center; gap: 2px; text-align: center; }
+.step-title { font-size: 13px; font-weight: 600; color: #344054; }
+.step-desc  { font-size: 12px; color: #98a2b3; }
+.step.is-active .step-title { color: #059669; }
+.step.is-done .step-title   { color: #29294c; }
+.step.is-error .step-title  { color: #f04438; }
+
+/* Checkmark svg */
+.step-check { width: 14px; height: 14px; }
+
+/* Size: sm */
+.steps--sm .step-node     { width: 28px; height: 28px; font-size: 11px; }
+.steps--sm .step::after   { top: 14px; height: 1.5px; }
+.steps--sm .step-title    { font-size: 12px; }
+.steps--sm .step-desc     { font-size: 11px; }
+
+/* Size: lg */
+.steps--lg .step-node   { width: 44px; height: 44px; font-size: 15px; }
+.steps--lg .step::after { top: 22px; }
+.steps--lg .step-title  { font-size: 14px; }
+
+/* Dot variant */
+.steps--dot .step-node   { width: 12px; height: 12px; border-width: 2px; font-size: 0; }
+.steps--dot .step::after { top: 6px; height: 2px; }
+.steps--dot .step.is-done .step-node   { background: #12b76a; border-color: #12b76a; }
+.steps--dot .step.is-active .step-node { background: #fff; border-color: #12b76a; box-shadow: 0 0 0 4px rgba(18,183,106,0.15); }
+
+/* Vertical */
+.steps--vertical { flex-direction: column; gap: 0; align-items: flex-start; width: auto; }
+.steps--vertical .step { flex-direction: row; align-items: flex-start; flex: none; gap: 16px; padding-bottom: 28px; }
+.steps--vertical .step:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  top: 36px; left: 17px;
+  width: 2px; height: 100%;
+  background: #e4e7ec;
+}
+.steps--vertical .step.is-done:not(:last-child)::after { background: #3d4a5c; }
+.steps--vertical .step-text { align-items: flex-start; text-align: left; }
+.steps--vertical .step:last-child { padding-bottom: 0; }

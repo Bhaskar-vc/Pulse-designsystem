@@ -1,0 +1,49 @@
+<div>
+  <ul class="vc-tab-list">
+    @for (tab of tabs; track $index) {
+      <li
+        [ngClass]="{
+          'tab-highlight':
+            tab.label === selectedTab?.label || tab.label === activeTab?.label,
+          'vc-tab-item': true,
+          'label-size-sm': labelSize === 'sm',
+          'label-size-default': labelSize === 'default',
+        }"
+        (click)="selectTab(tab)"
+      >
+        @if (tab.iconLeft) {
+          <i class="{{ tab.iconLeft }}"></i>
+        }
+
+        @if (tab.routerLink) {
+          <a
+            [routerLink]="tab.routerLink"
+            [routerLinkActive]="'vc-tab-router-active'"
+          >
+            <ng-container>
+              <!-- @if (tab.icon) {} -->
+
+              @if (tab.label) {
+                <span>{{ tab.label }}</span>
+              }
+            </ng-container>
+          </a>
+        } @else {
+          <a>
+            <ng-container>
+              <!-- @if (tab.icon) {} -->
+
+              @if (tab.label) {
+                <span>{{ tab.label }}</span>
+              }
+            </ng-container>
+          </a>
+        }
+
+        @if (tab.iconRight) {
+          <i class="{{ tab.iconRight }}"></i>
+        }
+      </li>
+    }
+  </ul>
+</div>

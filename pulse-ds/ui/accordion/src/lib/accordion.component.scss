@@ -1,0 +1,63 @@
+/* Accordion — Pulse Design System */
+
+:host { display: block; }
+
+/* ── Base accordion ── */
+.accordion { width: 100%; font-family: 'Inter', sans-serif; }
+
+.accordion-item { border-bottom: 1px solid #eaeaed; }
+.accordion-item:last-child { border-bottom: none; }
+
+.accordion-trigger {
+  width: 100%;
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  padding: 0 16px; height: 48px;
+  background: transparent; border: none; cursor: pointer;
+  font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 500;
+  color: #29294c; text-align: left;
+  transition: background 0.15s, color 0.15s, border-left 0.15s;
+  border-left: 3px solid transparent;
+}
+.accordion-trigger:hover { background: #f9fafb; }
+.accordion-trigger.is-open {
+  background: #f9f5ff; color: #6941c6;
+  border-left: 3px solid #7f56d9;
+}
+.accordion-trigger:disabled { color: #9d9dad; cursor: not-allowed; background: transparent; }
+
+.accordion-icon {
+  flex-shrink: 0; width: 20px; height: 20px; color: #9d9dad;
+  transition: transform 0.25s ease;
+}
+.accordion-trigger.is-open .accordion-icon { transform: rotate(180deg); }
+.accordion-trigger:disabled .accordion-icon { opacity: 0.4; }
+
+.accordion-trigger-content {
+  display: flex; align-items: center; gap: 10px; flex: 1; min-width: 0;
+}
+
+.accordion-content-wrap {
+  overflow: hidden; max-height: 0;
+  transition: max-height 0.25s ease;
+}
+.accordion-content-wrap.is-open { max-height: 600px; }
+.accordion-content {
+  padding: 4px 16px 16px;
+  font-size: 14px; color: #707087; line-height: 1.7;
+}
+
+/* Badges */
+.acc-badge {
+  font-size: 11px; font-weight: 600; padding: 2px 8px;
+  border-radius: 99px; background: #f4ebff; color: #6941c6;
+  border: 1px solid #d6bbfb;
+}
+.acc-badge-success { background: #ecfdf3; color: #039855; border-color: #a6f4c5; }
+.acc-badge-warning { background: #fffaeb; color: #f79009; border-color: #fedf89; }
+
+/* ── Bordered variant ── */
+.accordion--bordered {
+  border: 1px solid #eaeaed; border-radius: 10px; overflow: hidden;
+}
+.accordion--bordered .accordion-item { border-bottom: 1px solid #eaeaed; }
+.accordion--bordered .accordion-item:last-child { border-bottom: none; }

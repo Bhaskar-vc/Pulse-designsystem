@@ -1,0 +1,49 @@
+.option {
+  .left-content {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+
+    & .left-content-img {
+      width: 20px;
+      height: 16px;
+      margin-top: 3px;
+      object-fit: cover;
+    }
+
+    & .left-content-icon {
+      margin-top: 3px;
+    }
+
+    & .child-content {
+      width: 100%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+
+  .supporting-text {
+    color: #707087;
+  }
+
+  .right-content {
+    color: #707087;
+  }
+
+  .check-icon {
+    width: 16px;
+    height: 16px;
+    color: #7F56D9;
+  }
+
+  .active, .selected {
+    &.light {
+      background: #F2F4F7;
+    }
+
+    &.dark {
+      background: rgba(255, 255, 255, 0.1);
+    }
+  }
+}

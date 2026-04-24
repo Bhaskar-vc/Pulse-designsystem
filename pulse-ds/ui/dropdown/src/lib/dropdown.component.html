@@ -1,0 +1,64 @@
+<div class="dd-wrap">
+  @if (label) { <div class="dd-field-label">{{ label }}</div> }
+  <button
+    type="button"
+    class="dd-trigger"
+    [class.is-open]="isOpen"
+    [class.is-disabled]="disabled"
+    [class.is-error]="hasError"
+    [disabled]="disabled || null"
+    [attr.aria-expanded]="isOpen"
+    [attr.aria-haspopup]="'listbox'"
+    (click)="toggle()"
+  >
+    <span [class]="selectedLabel ? 'dd-selected' : 'dd-placeholder'">
+      {{ selectedLabel || placeholder }}
+    </span>
+    <svg class="dd-chevron" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+      <path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </button>
+
+  <div class="dd-menu" [class.is-open]="isOpen" role="listbox">
+    @if (searchable) {
+      <div class="dd-search-wrap">
+        <input
+          class="dd-search"
+          type="text"
+          placeholder="Search…"
+          [(ngModel)]="searchQuery"
+          (input)="filterItems()"
+          aria-label="Search options"
+        />
+      </div>
+    }
+    @for (item of filteredItems; track item.value) {
+      @if (item.dividerBefore) { <div class="dd-divider"></div> }
+      @if (item.group && isFirstInGroup(item)) {
+        <div class="dd-group-label">{{ item.group }}</div>
+      }
+      <div
+        class="dd-item"
+        role="option"
+        [class.is-selected]="item.value === value"
+        [class.is-disabled]="item.disabled"
+        [class.is-danger]="item.danger"
+        [attr.aria-selected]="item.value === value"
+        (click)="!item.disabled && select(item)"
+      >
+        <span class="dd-item-label">{{ item.label }}</span>
+        @if (item.description) {
+          <span class="dd-item-desc">{{ item.description }}</span>
+        }
+        @if (item.value === value) {
+          <svg class="dd-check" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+            <path d="M13 4L6 11 3 8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        }
+      </div>
+    }
+  </div>
+
+  @if (hint && !hasError)    { <div class="dd-field-hint">{{ hint }}</div> }
+  @if (errorMessage && hasError) { <div class="dd-field-error">{{ errorMessage }}</div> }
+</div>

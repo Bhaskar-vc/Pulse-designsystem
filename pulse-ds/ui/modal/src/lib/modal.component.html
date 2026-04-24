@@ -1,0 +1,37 @@
+<div
+  class="modal-overlay"
+  [class.is-open]="isOpen"
+  (click)="onOverlayClick($event)"
+  [attr.aria-modal]="isOpen ? 'true' : null"
+  role="dialog"
+  [attr.aria-label]="title || 'Dialog'"
+>
+  <div
+    class="modal"
+    [class.modal--wide]="size === 'wide'"
+    [class.modal--centered]="centered"
+    (click)="$event.stopPropagation()"
+  >
+    <div class="modal-content">
+      <div class="modal-icon-row">
+        <ng-content select="[modalIcon]"></ng-content>
+        <div class="modal-text">
+          @if (title) { <div class="modal-title">{{ title }}</div> }
+          @if (body)  { <div class="modal-body">{{ body }}</div> }
+          <ng-content select="[modalBody]"></ng-content>
+        </div>
+        @if (showClose) {
+          <button type="button" class="modal-close" (click)="close()" aria-label="Close dialog">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <path d="M4 4l8 8M12 4L4 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </button>
+        }
+      </div>
+    </div>
+    <hr class="modal-divider" />
+    <div class="modal-actions" [class]="actionsClass">
+      <ng-content select="[modalActions]"></ng-content>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,48 @@
+<div class="textarea-field">
+  @if (label) {
+    <vc-label [labelFor]="generatedId" [text]="label" [required]="required"></vc-label>
+  }
+  <textarea
+    [id]="textareaId || generatedId"
+    [required]="required"
+    [disabled]="disabled"
+    class="textarea-control"
+    [ngClass]="{
+      'is-error':
+        required === true &&
+        (model === '' || model === undefined) &&
+        touched === true,
+      'can-resize': resize === true,
+      'no-resize': resize === false
+    }"
+    [placeholder]="placeholder"
+    [minlength]="minLength"
+    [maxlength]="maxLength"
+    [(ngModel)]="model"
+    (ngModelChange)="onModelChange($event)"
+    (input)="onInputChange($event)"
+    [style]="textareaStyle"
+    (blur)="handleBlur()"
+    [maxlength]="maxLength ?? null"
+  ></textarea>
+
+  @if (
+    required === true &&
+    (model === '' || model === undefined) &&
+    touched === true
+  ) {
+    <label
+      [for]="textareaId || generatedId"
+      class="textarea-error"
+      >{{ errorText }}</label
+    >
+  }
+
+  @if (hintText) {
+    <label
+      [for]="textareaId || generatedId"
+      class="textarea-hint"
+      >{{ hintText }}</label
+    >
+  }
+</div>
