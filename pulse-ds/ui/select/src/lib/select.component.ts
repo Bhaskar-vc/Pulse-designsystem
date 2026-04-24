@@ -228,7 +228,7 @@ export class VcSelect
   optionsChangeSubscription: Subscription = Subscription.EMPTY;
   viewportChangeSubscription: Subscription = Subscription.EMPTY;
 
-  scrollStrategy = this._overlay.scrollStrategies.reposition();
+  scrollStrategy: any;
 
   model: VcSelectOption | VcSelectOption[] | undefined;
   onModelChange: (
@@ -245,6 +245,7 @@ export class VcSelect
     private _viewportRuler: ViewportRuler,
   ) {
     this.elementId = this._uidService.generateUniqueId('vc-select');
+    this.scrollStrategy = this._overlay.scrollStrategies.reposition();
   }
 
   ngOnInit(): void {
