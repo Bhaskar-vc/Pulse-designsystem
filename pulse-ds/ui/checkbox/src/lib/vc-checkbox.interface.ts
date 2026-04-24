@@ -1,4 +1,4 @@
-import { VcCheckbox } from './checkbox.component';
+import { VcCheckbox } from './vc-checkbox.component';
 
 /**
  * Checkbox item type.
