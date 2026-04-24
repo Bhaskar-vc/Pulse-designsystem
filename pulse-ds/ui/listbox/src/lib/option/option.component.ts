@@ -126,7 +126,7 @@ export class VcOption implements Highlightable, ListKeyManagerOption, OnDestroy 
   hovered: boolean = false;
   // selected: boolean = false;
   // multiple: boolean = false;
-  scrollTimerId!: number;
+  scrollTimerId!: ReturnType<typeof setTimeout>;
 
   constructor(public elementRef: ElementRef) {}
 

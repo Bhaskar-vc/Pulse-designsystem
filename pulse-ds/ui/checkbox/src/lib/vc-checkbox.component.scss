@@ -1,0 +1,73 @@
+/* VcCheckbox (legacy) — Pulse Design System */
+
+.checkbox-container {
+  display: flex; flex-direction: row; gap: 8px;
+}
+
+.checkbox {
+  display: flex; flex-shrink: 0; justify-content: center; align-items: center;
+  width: 16px; height: 16px; position: relative;
+  border: 1px solid #D0D5DD; border-radius: 4px;
+  transition: all 0.3s; outline: 0; cursor: pointer;
+
+  &:hover { border-color: #7F56D9; background: #F9F5FF; }
+
+  .checkbox-hidden {
+    position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); opacity: 0;
+  }
+
+  .check-icon path { stroke: #fff; }
+
+  &[data-disabled='false'] {
+    &:hover, &[data-hovered='true'] { border-color: #7F56D9; background: #F9F5FF; }
+    &[data-focused='true'] { box-shadow: 0 0 0 4px #f4ebff; }
+
+    &[data-checked='false'][data-focused='true'] { border-color: #D6BBFB; }
+    &[data-checked='false'][data-focused='true']:hover { border-color: #7F56D9; }
+
+    &[data-checked='true'] {
+      background: #7F56D9; border-color: #7F56D9;
+      &:hover { background: #F9F5FF; .check-icon path { stroke: #7F56D9; } }
+      &[data-focused='true'] { border-color: #7F56D9; background: #7F56D9; }
+      &[data-focused='true']:hover { background: #F9F5FF; .check-icon path { stroke: #7F56D9; } }
+    }
+
+    &[data-checked='mixed'] {
+      background: #7F56D9; border-color: #7F56D9;
+      &:hover { background: #F9F5FF; .check-icon path { stroke: #7F56D9; } }
+      &[data-focused='true'] { border-color: #7F56D9; background: #F9F5FF; }
+    }
+  }
+
+  &[data-disabled='true'] {
+    border-color: #D0D5DD; background: #F9FAFB; pointer-events: none; cursor: not-allowed;
+    .check-icon path { color: #D0D5DD; stroke: #D0D5DD; }
+  }
+}
+
+.checkbox-size-sm { width: 16px; height: 16px; border-radius: 4px; }
+.checkbox-size-md {
+  width: 20px; height: 20px; border-radius: 6px;
+  .check-icon { width: 14px; height: 14px; }
+}
+
+.input-label {
+  display: flex; flex-direction: column;
+  .input-label-main { color: #29294c; font-size: 14px; font-weight: 400; }
+  .input-label-subtext { color: #98A2B3; font-size: 12px; font-weight: 400; }
+
+  &.checkbox-size-sm-label {
+    .input-label-main { font-size: 14px; }
+    .input-label-subtext { font-size: 12px; }
+  }
+
+  &.checkbox-label-light .input-label-main { color: #707087; font-weight: 400; }
+  &.checkbox-label-dark .input-label-main { color: #29294c; font-weight: 500; }
+}
+
+.checkbox[data-disabled='true'] {
+  cursor: not-allowed;
+  & + .input-label { pointer-events: none; }
+  & + .input-label .input-label-main,
+  & + .input-label .input-label-subtext { color: #D0D5DD; pointer-events: none; }
+}
