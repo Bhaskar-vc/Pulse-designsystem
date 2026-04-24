@@ -1,0 +1,11 @@
+pulse-dashboard/
+Extra/
+.DS_Store
+.vscode/
+.claude/
+Pulse-prod/
+UAT/
+vantagecircle-core/
+dtc-strategy.pine
+.vercel
+node_modules/

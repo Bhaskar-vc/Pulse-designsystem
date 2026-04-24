@@ -1,0 +1,46 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+permissions:
+  contents: read
+  packages: write
+  pages: write
+  id-token: write
+
+defaults:
+  run:
+    working-directory: pulse-ds
+
+jobs:
+  publish-npm:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          registry-url: https://npm.pkg.github.com
+          scope: '@pulse-ds'
+
+      - run: npm install
+
+      - name: Build library
+        run: npm run build:lib
+
+      - name: Set package version from tag
+        run: |
+          VERSION="${GITHUB_REF#refs/tags/v}"
+          cd dist/ui
+          npm version "$VERSION" --no-git-tag-version
+
+      - name: Publish to GitHub Packages
+        run: npm publish --access public
+        working-directory: pulse-ds/dist/ui
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
