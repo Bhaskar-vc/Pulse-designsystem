@@ -1873,7 +1873,7 @@ a:hover {
 ──────────────────────────────────────── */
 .dnd-wrap {
   display: flex;
-  gap: 24px;
+  gap: 0;
   flex-wrap: wrap;
   font-family: "Inter", sans-serif;
   padding: 32px 4px 8px;
@@ -1885,6 +1885,16 @@ a:hover {
   min-width: 260px;
   position: relative;
   margin-top: 20px;
+  padding: 0 28px;
+}
+
+.dnd-do {
+  padding-left: 4px;
+}
+
+.dnd-dont {
+  padding-right: 4px;
+  border-left: 1px solid var(--ds-border);
 }
 
 /* ── Circular badge icon (replaces coloured header bar) ── */
@@ -1924,11 +1934,8 @@ a:hover {
 /* ── Panel body ─────────────────────────────────── */
 .dnd-do-body,
 .dnd-dont-body {
-  padding: 32px 20px 20px;
-  background: var(--ds-bg);
-  border: 1px solid var(--ds-border);
-  border-radius: 12px;
-  box-shadow: 0 1px 4px rgba(16, 24, 40, 0.06);
+  padding: 32px 4px 20px;
+  background: transparent;
   display: flex;
   flex-direction: column;
   gap: 12px;
