@@ -1,0 +1,36 @@
+.vc-step-icon {
+    @apply flex flex-row justify-center;
+}
+
+.vc-step-label {
+    @apply inline-block whitespace-nowrap overflow-hidden text-ellipsis;
+
+    &.vc-step-label-active {
+        @apply text-primary-500 font-normal;
+    }
+
+    &.vc-step-label-selected {
+        @apply text-primary-500 font-medium;
+    }
+}
+
+.vc-step-label-inline {
+    @apply text-neutral-300;
+
+    &.vc-step-label-active {
+        @apply text-neutral-800;
+    }
+
+    &.vc-step-label-selected {
+        @apply text-neutral-800 font-medium;
+    }
+}
+
+.vc-horizontal-step-header-inline {
+    @apply flex flex-row items-center gap-4 min-w-0;
+}
+
+.vc-horizontal-line {
+    @apply w-full;
+    border: 2px #D0D5DD solid;
+}

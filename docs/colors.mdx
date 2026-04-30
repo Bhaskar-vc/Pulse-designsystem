@@ -1,0 +1,256 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Design Tokens/Colors" tags={['hidden']} parameters={{ docs: { toc: { disable: true } } }} />
+
+<style>{`
+  .palette-section { margin-bottom: 40px; }
+  .palette-label { font-size: 13px; font-weight: 600; color: #29294c; margin-bottom: 4px; }
+  .palette-desc { font-size: 12px; color: #707087; margin-bottom: 12px; }
+  .color-row { display: flex; border-radius: 10px; overflow: hidden; border: 1px solid #eaeaed; }
+  .color-swatch { flex: 1; min-width: 0; }
+  .color-swatch-inner { height: 64px; width: 100%; }
+  .color-swatch-info { padding: 7px 8px; background: #fff; border-top: 1px solid #eaeaed; }
+  .color-swatch-step { font-size: 11px; font-weight: 600; color: #29294c; }
+  .color-swatch-hex { font-size: 9px; font-family: monospace; color: #707087; margin-top: 1px; }
+  .color-swatch + .color-swatch { border-left: 1px solid #eaeaed; }
+  .semantic-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 10px; margin-bottom: 24px; }
+  .semantic-card { display: flex; align-items: stretch; border: 1px solid #eaeaed; border-radius: 8px; overflow: hidden; }
+  .semantic-swatch { width: 48px; min-width: 48px; flex-shrink: 0; }
+  .semantic-info { padding: 10px 12px; }
+  .semantic-name { font-size: 11px; font-weight: 600; color: #29294c; font-family: monospace; margin-bottom: 2px; }
+  .semantic-value { font-size: 10px; color: #707087; font-family: monospace; }
+  .semantic-desc { font-size: 10px; color: #9d9dad; margin-top: 3px; }
+  .section-heading { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: #707087; margin: 20px 0 10px; }
+
+  /* ── Dark mode ── */
+  [data-theme="dark"] .palette-label { color: #e9ecf5 !important; }
+  [data-theme="dark"] .palette-desc  { color: #9aa3be !important; }
+  [data-theme="dark"] .color-row     { border-color: #353858 !important; }
+  [data-theme="dark"] .color-swatch-info { background: #2a2f40 !important; border-top-color: #353858 !important; }
+  [data-theme="dark"] .color-swatch + .color-swatch { border-left-color: #353858 !important; }
+  [data-theme="dark"] .color-swatch-step { color: #e9ecf5 !important; }
+  [data-theme="dark"] .color-swatch-hex  { color: #9aa3be !important; }
+  [data-theme="dark"] .semantic-card  { border-color: #353858 !important; background: #2a2f40 !important; }
+  [data-theme="dark"] .semantic-name  { color: #e9ecf5 !important; }
+  [data-theme="dark"] .semantic-value { color: #9aa3be !important; }
+  [data-theme="dark"] .semantic-desc  { color: #6e7798 !important; }
+  [data-theme="dark"] .section-heading { color: #6e7798 !important; }
+`}</style>
+
+## Brand Colors
+
+<div className="palette-section">
+  <div className="palette-label">Primary — Navy</div>
+  <div className="palette-desc">Foundation neutral, used for text and backgrounds</div>
+  <div className="color-row">
+    <div className="color-swatch"><div className="color-swatch-inner" style={{background:'#252545'}}></div><div className="color-swatch-info"><div className="color-swatch-step">600</div><div className="color-swatch-hex">#252545</div></div></div>
+    <div className="color-swatch"><div className="color-swatch-inner" style={{background:'#29294c'}}></div><div className="color-swatch-info"><div className="color-swatch-step">500</div><div className="color-swatch-hex">#29294c</div></div></div>
+    <div className="color-swatch"><div className="color-swatch-inner" style={{background:'#545470'}}></div><div className="color-swatch-info"><div className="color-swatch-step">400</div><div className="color-swatch-hex">#545470</div></div></div>
+    <div className="color-swatch"><div className="color-swatch-inner" style={{background:'#707087'}}></div><div className="color-swatch-info"><div className="color-swatch-step">300</div><div className="color-swatch-hex">#707087</div></div></div>
+    <div className="color-swatch"><div className="color-swatch-inner" style={{background:'#9d9dad'}}></div><div className="color-swatch-info"><div className="color-swatch-step">200</div><div className="color-swatch-hex">#9d9dad</div></div></div>
+    <div className="color-swatch"><div className="color-swatch-inner" style={{background:'#bdbdc8'}}></div><div className="color-swatch-info"><div className="color-swatch-step">100</div><div className="color-swatch-hex">#bdbdc8</div></div></div>
+    <div className="color-swatch"><div className="color-swatch-inner" style={{background:'#eaeaed'}}></div><div className="color-swatch-info"><div className="color-swatch-step">50</div><div className="color-swatch-hex">#eaeaed</div></div></div>
+    <div className="color-swatch"><div className="color-swatch-inner" style={{background:'#f4f4f6',borderBottom:'1px solid #eaeaed'}}></div><div className="color-swatch-info"><div className="color-swatch-step">25</div><div className="color-swatch-hex">#f4f4f6</div></div></div>
+  </div>
+</div>
+
+<div className="palette-section">
+  <div className="palette-label">Secondary — Purple</div>
+  <div className="palette-desc">Accent and interactive states</div>
+  <div className="color-row">
+    <div className="color-swatch"><div className="color-swatch-inner" style={{background:'#6941c6'}}></div><div className="color-swatch-info"><div className="color-swatch-step">700</div><div className="color-swatch-hex">#6941c6</div></div></div>
+    <div className="color-swatch"><div className="color-swatch-inner" style={{background:'#7f56d9'}}></div><div className="color-swatch-info"><div className="color-swatch-step">600</div><div className="color-swatch-hex">#7f56d9</div></div></div>
+    <div className="color-swatch"><div className="color-swatch-inner" style={{background:'#9e77ed'}}></div><div className="color-swatch-info"><div className="color-swatch-step">500</div><div className="color-swatch-hex">#9e77ed</div></div></div>
+    <div className="color-swatch"><div className="color-swatch-inner" style={{background:'#b692f6'}}></div><div className="color-swatch-info"><div className="color-swatch-step">400</div><div className="color-swatch-hex">#b692f6</div></div></div>
+    <div className="color-swatch"><div className="color-swatch-inner" style={{background:'#d6bbfb'}}></div><div className="color-swatch-info"><div className="color-swatch-step">300</div><div className="color-swatch-hex">#d6bbfb</div></div></div>
+    <div className="color-swatch"><div className="color-swatch-inner" style={{background:'#e9d7fe'}}></div><div className="color-swatch-info"><div className="color-swatch-step">200</div><div className="color-swatch-hex">#e9d7fe</div></div></div>
+    <div className="color-swatch"><div className="color-swatch-inner" style={{background:'#f4ebff'}}></div><div className="color-swatch-info"><div className="color-swatch-step">100</div><div className="color-swatch-hex">#f4ebff</div></div></div>
+    <div className="color-swatch"><div className="color-swatch-inner" style={{background:'#f9f5ff'}}></div><div className="color-swatch-info"><div className="color-swatch-step">50</div><div className="color-swatch-hex">#f9f5ff</div></div></div>
+    <div className="color-swatch"><div className="color-swatch-inner" style={{background:'#fcfaff',borderBottom:'1px solid #eaeaed'}}></div><div className="color-swatch-info"><div className="color-swatch-step">25</div><div className="color-swatch-hex">#fcfaff</div></div></div>
+  </div>
+</div>
+
+---
+
+## Semantic Palettes
+
+<div className="palette-section">
+  <div className="palette-label">Success — Green</div>
+  <div className="palette-desc">Positive outcomes, completed states</div>
+  <div className="color-row">
+    <div className="color-swatch"><div className="color-swatch-inner" style={{background:'#039855'}}></div><div className="color-swatch-info"><div className="color-swatch-step">600</div><div className="color-swatch-hex">#039855</div></div></div>
+    <div className="color-swatch"><div className="color-swatch-inner" style={{background:'#12b76a'}}></div><div className="color-swatch-info"><div className="color-swatch-step">500</div><div className="color-swatch-hex">#12b76a</div></div></div>
+    <div className="color-swatch"><div className="color-swatch-inner" style={{background:'#32d583'}}></div><div className="color-swatch-info"><div className="color-swatch-step">400</div><div className="color-swatch-hex">#32d583</div></div></div>
+    <div className="color-swatch"><div className="color-swatch-inner" style={{background:'#6ce9a6'}}></div><div className="color-swatch-info"><div className="color-swatch-step">300</div><div className="color-swatch-hex">#6ce9a6</div></div></div>
+    <div className="color-swatch"><div className="color-swatch-inner" style={{background:'#a6f4c5'}}></div><div className="color-swatch-info"><div className="color-swatch-step">200</div><div className="color-swatch-hex">#a6f4c5</div></div></div>
+    <div className="color-swatch"><div className="color-swatch-inner" style={{background:'#d1fadf'}}></div><div className="color-swatch-info"><div className="color-swatch-step">100</div><div className="color-swatch-hex">#d1fadf</div></div></div>
+    <div className="color-swatch"><div className="color-swatch-inner" style={{background:'#ecfdf3'}}></div><div className="color-swatch-info"><div className="color-swatch-step">50</div><div className="color-swatch-hex">#ecfdf3</div></div></div>
+    <div className="color-swatch"><div className="color-swatch-inner" style={{background:'#f6fef9',borderBottom:'1px solid #eaeaed'}}></div><div className="color-swatch-info"><div className="color-swatch-step">25</div><div className="color-swatch-hex">#f6fef9</div></div></div>
+  </div>
+</div>
+
+<div className="palette-section">
+  <div className="palette-label">Warning — Amber</div>
+  <div className="palette-desc">Caution, pending states, alerts</div>
+  <div className="color-row">
+    <div className="color-swatch"><div className="color-swatch-inner" style={{background:'#dc6803'}}></div><div className="color-swatch-info"><div className="color-swatch-step">600</div><div className="color-swatch-hex">#dc6803</div></div></div>
+    <div className="color-swatch"><div className="color-swatch-inner" style={{background:'#f79009'}}></div><div className="color-swatch-info"><div className="color-swatch-step">500</div><div className="color-swatch-hex">#f79009</div></div></div>
+    <div className="color-swatch"><div className="color-swatch-inner" style={{background:'#fdb022'}}></div><div className="color-swatch-info"><div className="color-swatch-step">400</div><div className="color-swatch-hex">#fdb022</div></div></div>
+    <div className="color-swatch"><div className="color-swatch-inner" style={{background:'#fec84b'}}></div><div className="color-swatch-info"><div className="color-swatch-step">300</div><div className="color-swatch-hex">#fec84b</div></div></div>
+    <div className="color-swatch"><div className="color-swatch-inner" style={{background:'#fedf89'}}></div><div className="color-swatch-info"><div className="color-swatch-step">200</div><div className="color-swatch-hex">#fedf89</div></div></div>
+    <div className="color-swatch"><div className="color-swatch-inner" style={{background:'#fef0c7'}}></div><div className="color-swatch-info"><div className="color-swatch-step">100</div><div className="color-swatch-hex">#fef0c7</div></div></div>
+    <div className="color-swatch"><div className="color-swatch-inner" style={{background:'#fffaeb'}}></div><div className="color-swatch-info"><div className="color-swatch-step">50</div><div className="color-swatch-hex">#fffaeb</div></div></div>
+    <div className="color-swatch"><div className="color-swatch-inner" style={{background:'#fffcf5',borderBottom:'1px solid #eaeaed'}}></div><div className="color-swatch-info"><div className="color-swatch-step">25</div><div className="color-swatch-hex">#fffcf5</div></div></div>
+  </div>
+</div>
+
+<div className="palette-section">
+  <div className="palette-label">Error — Red</div>
+  <div className="palette-desc">Destructive actions, validation errors</div>
+  <div className="color-row">
+    <div className="color-swatch"><div className="color-swatch-inner" style={{background:'#d92d20'}}></div><div className="color-swatch-info"><div className="color-swatch-step">600</div><div className="color-swatch-hex">#d92d20</div></div></div>
+    <div className="color-swatch"><div className="color-swatch-inner" style={{background:'#f04438'}}></div><div className="color-swatch-info"><div className="color-swatch-step">500</div><div className="color-swatch-hex">#f04438</div></div></div>
+    <div className="color-swatch"><div className="color-swatch-inner" style={{background:'#f97066'}}></div><div className="color-swatch-info"><div className="color-swatch-step">400</div><div className="color-swatch-hex">#f97066</div></div></div>
+    <div className="color-swatch"><div className="color-swatch-inner" style={{background:'#fda29b'}}></div><div className="color-swatch-info"><div className="color-swatch-step">300</div><div className="color-swatch-hex">#fda29b</div></div></div>
+    <div className="color-swatch"><div className="color-swatch-inner" style={{background:'#fecdca'}}></div><div className="color-swatch-info"><div className="color-swatch-step">200</div><div className="color-swatch-hex">#fecdca</div></div></div>
+    <div className="color-swatch"><div className="color-swatch-inner" style={{background:'#fee4e2'}}></div><div className="color-swatch-info"><div className="color-swatch-step">100</div><div className="color-swatch-hex">#fee4e2</div></div></div>
+    <div className="color-swatch"><div className="color-swatch-inner" style={{background:'#fef3f2'}}></div><div className="color-swatch-info"><div className="color-swatch-step">50</div><div className="color-swatch-hex">#fef3f2</div></div></div>
+    <div className="color-swatch"><div className="color-swatch-inner" style={{background:'#fffbfa',borderBottom:'1px solid #eaeaed'}}></div><div className="color-swatch-info"><div className="color-swatch-step">25</div><div className="color-swatch-hex">#fffbfa</div></div></div>
+  </div>
+</div>
+
+<div className="palette-section">
+  <div className="palette-label">Info — Sky Blue</div>
+  <div className="palette-desc">Informational states, links</div>
+  <div className="color-row">
+    <div className="color-swatch"><div className="color-swatch-inner" style={{background:'#0086c9'}}></div><div className="color-swatch-info"><div className="color-swatch-step">600</div><div className="color-swatch-hex">#0086c9</div></div></div>
+    <div className="color-swatch"><div className="color-swatch-inner" style={{background:'#0ba5ec'}}></div><div className="color-swatch-info"><div className="color-swatch-step">500</div><div className="color-swatch-hex">#0ba5ec</div></div></div>
+    <div className="color-swatch"><div className="color-swatch-inner" style={{background:'#36bffa'}}></div><div className="color-swatch-info"><div className="color-swatch-step">400</div><div className="color-swatch-hex">#36bffa</div></div></div>
+    <div className="color-swatch"><div className="color-swatch-inner" style={{background:'#7cd4fd'}}></div><div className="color-swatch-info"><div className="color-swatch-step">300</div><div className="color-swatch-hex">#7cd4fd</div></div></div>
+    <div className="color-swatch"><div className="color-swatch-inner" style={{background:'#b9e6fe'}}></div><div className="color-swatch-info"><div className="color-swatch-step">200</div><div className="color-swatch-hex">#b9e6fe</div></div></div>
+    <div className="color-swatch"><div className="color-swatch-inner" style={{background:'#e0f2fe'}}></div><div className="color-swatch-info"><div className="color-swatch-step">100</div><div className="color-swatch-hex">#e0f2fe</div></div></div>
+    <div className="color-swatch"><div className="color-swatch-inner" style={{background:'#f0f9ff'}}></div><div className="color-swatch-info"><div className="color-swatch-step">50</div><div className="color-swatch-hex">#f0f9ff</div></div></div>
+    <div className="color-swatch"><div className="color-swatch-inner" style={{background:'#f5fbff',borderBottom:'1px solid #eaeaed'}}></div><div className="color-swatch-info"><div className="color-swatch-step">25</div><div className="color-swatch-hex">#f5fbff</div></div></div>
+  </div>
+</div>
+
+<div className="palette-section">
+  <div className="palette-label">Neutral</div>
+  <div className="palette-desc">Backgrounds, borders, muted text</div>
+  <div className="color-row">
+    <div className="color-swatch"><div className="color-swatch-inner" style={{background:'#475467'}}></div><div className="color-swatch-info"><div className="color-swatch-step">600</div><div className="color-swatch-hex">#475467</div></div></div>
+    <div className="color-swatch"><div className="color-swatch-inner" style={{background:'#5c6c7c'}}></div><div className="color-swatch-info"><div className="color-swatch-step">500</div><div className="color-swatch-hex">#5c6c7c</div></div></div>
+    <div className="color-swatch"><div className="color-swatch-inner" style={{background:'#98a2b3'}}></div><div className="color-swatch-info"><div className="color-swatch-step">400</div><div className="color-swatch-hex">#98a2b3</div></div></div>
+    <div className="color-swatch"><div className="color-swatch-inner" style={{background:'#d0d5dd'}}></div><div className="color-swatch-info"><div className="color-swatch-step">300</div><div className="color-swatch-hex">#d0d5dd</div></div></div>
+    <div className="color-swatch"><div className="color-swatch-inner" style={{background:'#e1e5ea'}}></div><div className="color-swatch-info"><div className="color-swatch-step">200</div><div className="color-swatch-hex">#e1e5ea</div></div></div>
+    <div className="color-swatch"><div className="color-swatch-inner" style={{background:'#f2f4f7'}}></div><div className="color-swatch-info"><div className="color-swatch-step">100</div><div className="color-swatch-hex">#f2f4f7</div></div></div>
+    <div className="color-swatch"><div className="color-swatch-inner" style={{background:'#f9fafb',borderBottom:'1px solid #eaeaed'}}></div><div className="color-swatch-info"><div className="color-swatch-step">50</div><div className="color-swatch-hex">#f9fafb</div></div></div>
+  </div>
+</div>
+
+---
+
+## Semantic Tokens
+
+Use these CSS custom properties in components instead of raw hex values.
+
+<div className="section-heading">Text</div>
+<div className="semantic-grid">
+  <div className="semantic-card"><div className="semantic-swatch" style={{background:'#29294c'}}></div><div className="semantic-info"><div className="semantic-name">--ds-text</div><div className="semantic-value">#29294c · primary-500</div><div className="semantic-desc">Default text</div></div></div>
+  <div className="semantic-card"><div className="semantic-swatch" style={{background:'#101828'}}></div><div className="semantic-info"><div className="semantic-name">--ds-text-heading</div><div className="semantic-value">#101828</div><div className="semantic-desc">Headings, high emphasis</div></div></div>
+  <div className="semantic-card"><div className="semantic-swatch" style={{background:'#344054'}}></div><div className="semantic-info"><div className="semantic-name">--ds-text-body</div><div className="semantic-value">#344054</div><div className="semantic-desc">Body text</div></div></div>
+  <div className="semantic-card"><div className="semantic-swatch" style={{background:'#475467'}}></div><div className="semantic-info"><div className="semantic-name">--ds-text-secondary</div><div className="semantic-value">#475467</div><div className="semantic-desc">Secondary body text</div></div></div>
+  <div className="semantic-card"><div className="semantic-swatch" style={{background:'#667085'}}></div><div className="semantic-info"><div className="semantic-name">--ds-text-muted</div><div className="semantic-value">#667085</div><div className="semantic-desc">Muted text, labels</div></div></div>
+  <div className="semantic-card"><div className="semantic-swatch" style={{background:'#707087'}}></div><div className="semantic-info"><div className="semantic-name">--ds-text-faint</div><div className="semantic-value">#707087 · primary-300</div><div className="semantic-desc">Faint text, captions</div></div></div>
+  <div className="semantic-card"><div className="semantic-swatch" style={{background:'#98a2b3'}}></div><div className="semantic-info"><div className="semantic-name">--ds-text-placeholder</div><div className="semantic-value">#98a2b3 · neutral-400</div><div className="semantic-desc">Placeholders</div></div></div>
+  <div className="semantic-card"><div className="semantic-swatch" style={{background:'#9d9dad'}}></div><div className="semantic-info"><div className="semantic-name">--ds-text-disabled</div><div className="semantic-value">#9d9dad · primary-200</div><div className="semantic-desc">Disabled text</div></div></div>
+</div>
+
+<div className="section-heading">Backgrounds</div>
+<div className="semantic-grid">
+  <div className="semantic-card"><div className="semantic-swatch" style={{background:'#ffffff',border:'1px solid #eaeaed'}}></div><div className="semantic-info"><div className="semantic-name">--ds-bg</div><div className="semantic-value">#ffffff</div><div className="semantic-desc">Page background</div></div></div>
+  <div className="semantic-card"><div className="semantic-swatch" style={{background:'#f9fafb'}}></div><div className="semantic-info"><div className="semantic-name">--ds-bg-subtle</div><div className="semantic-value">#f9fafb</div><div className="semantic-desc">Subtle background</div></div></div>
+  <div className="semantic-card"><div className="semantic-swatch" style={{background:'#f4f4f6'}}></div><div className="semantic-info"><div className="semantic-name">--ds-bg-muted</div><div className="semantic-value">#f4f4f6 · primary-25</div><div className="semantic-desc">Muted background</div></div></div>
+  <div className="semantic-card"><div className="semantic-swatch" style={{background:'#f2f4f7'}}></div><div className="semantic-info"><div className="semantic-name">--ds-bg-hover</div><div className="semantic-value">#f2f4f7 · neutral-100</div><div className="semantic-desc">Hover state background</div></div></div>
+  <div className="semantic-card"><div className="semantic-swatch" style={{background:'#ffffff',border:'1px solid #eaeaed'}}></div><div className="semantic-info"><div className="semantic-name">--ds-bg-raised</div><div className="semantic-value">#ffffff</div><div className="semantic-desc">Elevated surfaces (cards, modals)</div></div></div>
+</div>
+
+<div className="section-heading">Borders</div>
+<div className="semantic-grid">
+  <div className="semantic-card"><div className="semantic-swatch" style={{background:'#eaeaed'}}></div><div className="semantic-info"><div className="semantic-name">--ds-border</div><div className="semantic-value">#eaeaed · primary-50</div><div className="semantic-desc">Default borders, dividers</div></div></div>
+  <div className="semantic-card"><div className="semantic-swatch" style={{background:'#e4e7ec'}}></div><div className="semantic-info"><div className="semantic-name">--ds-border-medium</div><div className="semantic-value">#e4e7ec</div><div className="semantic-desc">Medium emphasis borders</div></div></div>
+  <div className="semantic-card"><div className="semantic-swatch" style={{background:'#d0d5dd'}}></div><div className="semantic-info"><div className="semantic-name">--ds-border-strong</div><div className="semantic-value">#d0d5dd · neutral-300</div><div className="semantic-desc">Strong borders, input focus</div></div></div>
+</div>
+
+<div className="section-heading">Brand / Purple</div>
+<div className="semantic-grid">
+  <div className="semantic-card"><div className="semantic-swatch" style={{background:'#7f56d9'}}></div><div className="semantic-info"><div className="semantic-name">--ds-brand</div><div className="semantic-value">#7f56d9 · secondary-600</div><div className="semantic-desc">Primary brand accent</div></div></div>
+  <div className="semantic-card"><div className="semantic-swatch" style={{background:'#6941c6'}}></div><div className="semantic-info"><div className="semantic-name">--ds-brand-dark</div><div className="semantic-value">#6941c6 · secondary-700</div><div className="semantic-desc">Darker brand, active states</div></div></div>
+  <div className="semantic-card"><div className="semantic-swatch" style={{background:'#9e77ed'}}></div><div className="semantic-info"><div className="semantic-name">--ds-brand-hover</div><div className="semantic-value">#9e77ed · secondary-500</div><div className="semantic-desc">Brand hover state</div></div></div>
+  <div className="semantic-card"><div className="semantic-swatch" style={{background:'#f9f5ff'}}></div><div className="semantic-info"><div className="semantic-name">--ds-brand-subtle</div><div className="semantic-value">#f9f5ff · secondary-50</div><div className="semantic-desc">Subtle brand background</div></div></div>
+  <div className="semantic-card"><div className="semantic-swatch" style={{background:'#f4ebff'}}></div><div className="semantic-info"><div className="semantic-name">--ds-brand-light</div><div className="semantic-value">#f4ebff · secondary-100</div><div className="semantic-desc">Light brand background</div></div></div>
+  <div className="semantic-card"><div className="semantic-swatch" style={{background:'#e9d7fe'}}></div><div className="semantic-info"><div className="semantic-name">--ds-brand-medium</div><div className="semantic-value">#e9d7fe · secondary-200</div><div className="semantic-desc">Medium brand background</div></div></div>
+  <div className="semantic-card"><div className="semantic-swatch" style={{background:'#d6bbfb'}}></div><div className="semantic-info"><div className="semantic-name">--ds-brand-border</div><div className="semantic-value">#d6bbfb · secondary-300</div><div className="semantic-desc">Brand-tinted borders</div></div></div>
+  <div className="semantic-card"><div className="semantic-swatch" style={{background:'#6941c6'}}></div><div className="semantic-info"><div className="semantic-name">--ds-brand-text</div><div className="semantic-value">#6941c6 · secondary-700</div><div className="semantic-desc">Brand-coloured text, links</div></div></div>
+</div>
+
+<div className="section-heading">Success / Green</div>
+<div className="semantic-grid">
+  <div className="semantic-card"><div className="semantic-swatch" style={{background:'#12b76a'}}></div><div className="semantic-info"><div className="semantic-name">--ds-success</div><div className="semantic-value">#12b76a · success-500</div><div className="semantic-desc">Success solid</div></div></div>
+  <div className="semantic-card"><div className="semantic-swatch" style={{background:'#039855'}}></div><div className="semantic-info"><div className="semantic-name">--ds-success-dark</div><div className="semantic-value">#039855 · success-600</div><div className="semantic-desc">Darker success</div></div></div>
+  <div className="semantic-card"><div className="semantic-swatch" style={{background:'#027a48'}}></div><div className="semantic-info"><div className="semantic-name">--ds-success-darkest</div><div className="semantic-value">#027a48</div><div className="semantic-desc">Darkest success, text on light bg</div></div></div>
+  <div className="semantic-card"><div className="semantic-swatch" style={{background:'#ecfdf5'}}></div><div className="semantic-info"><div className="semantic-name">--ds-success-subtle</div><div className="semantic-value">#ecfdf5</div><div className="semantic-desc">Subtle success background</div></div></div>
+  <div className="semantic-card"><div className="semantic-swatch" style={{background:'#d1fadf'}}></div><div className="semantic-info"><div className="semantic-name">--ds-success-light</div><div className="semantic-value">#d1fadf · success-100</div><div className="semantic-desc">Light success background</div></div></div>
+  <div className="semantic-card"><div className="semantic-swatch" style={{background:'#a6f4c5'}}></div><div className="semantic-info"><div className="semantic-name">--ds-success-border</div><div className="semantic-value">#a6f4c5 · success-200</div><div className="semantic-desc">Success-tinted borders</div></div></div>
+  <div className="semantic-card"><div className="semantic-swatch" style={{background:'#027a48'}}></div><div className="semantic-info"><div className="semantic-name">--ds-success-text</div><div className="semantic-value">#027a48</div><div className="semantic-desc">Success text on light bg</div></div></div>
+</div>
+
+<div className="section-heading">Warning / Amber</div>
+<div className="semantic-grid">
+  <div className="semantic-card"><div className="semantic-swatch" style={{background:'#f79009'}}></div><div className="semantic-info"><div className="semantic-name">--ds-warning</div><div className="semantic-value">#f79009 · warning-500</div><div className="semantic-desc">Warning solid</div></div></div>
+  <div className="semantic-card"><div className="semantic-swatch" style={{background:'#dc6803'}}></div><div className="semantic-info"><div className="semantic-name">--ds-warning-dark</div><div className="semantic-value">#dc6803 · warning-600</div><div className="semantic-desc">Darker warning</div></div></div>
+  <div className="semantic-card"><div className="semantic-swatch" style={{background:'#b54708'}}></div><div className="semantic-info"><div className="semantic-name">--ds-warning-darkest</div><div className="semantic-value">#b54708</div><div className="semantic-desc">Darkest warning, text on light bg</div></div></div>
+  <div className="semantic-card"><div className="semantic-swatch" style={{background:'#fffaeb'}}></div><div className="semantic-info"><div className="semantic-name">--ds-warning-subtle</div><div className="semantic-value">#fffaeb · warning-50</div><div className="semantic-desc">Subtle warning background</div></div></div>
+  <div className="semantic-card"><div className="semantic-swatch" style={{background:'#fef0c7'}}></div><div className="semantic-info"><div className="semantic-name">--ds-warning-light</div><div className="semantic-value">#fef0c7 · warning-100</div><div className="semantic-desc">Light warning background</div></div></div>
+  <div className="semantic-card"><div className="semantic-swatch" style={{background:'#fec84b'}}></div><div className="semantic-info"><div className="semantic-name">--ds-warning-border</div><div className="semantic-value">#fec84b · warning-300</div><div className="semantic-desc">Warning-tinted borders</div></div></div>
+  <div className="semantic-card"><div className="semantic-swatch" style={{background:'#b54708'}}></div><div className="semantic-info"><div className="semantic-name">--ds-warning-text</div><div className="semantic-value">#b54708</div><div className="semantic-desc">Warning text on light bg</div></div></div>
+</div>
+
+<div className="section-heading">Danger / Red</div>
+<div className="semantic-grid">
+  <div className="semantic-card"><div className="semantic-swatch" style={{background:'#f04438'}}></div><div className="semantic-info"><div className="semantic-name">--ds-danger</div><div className="semantic-value">#f04438 · error-500</div><div className="semantic-desc">Danger solid</div></div></div>
+  <div className="semantic-card"><div className="semantic-swatch" style={{background:'#d92d20'}}></div><div className="semantic-info"><div className="semantic-name">--ds-danger-dark</div><div className="semantic-value">#d92d20 · error-600</div><div className="semantic-desc">Darker danger</div></div></div>
+  <div className="semantic-card"><div className="semantic-swatch" style={{background:'#b42318'}}></div><div className="semantic-info"><div className="semantic-name">--ds-danger-darkest</div><div className="semantic-value">#b42318</div><div className="semantic-desc">Darkest danger, text on light bg</div></div></div>
+  <div className="semantic-card"><div className="semantic-swatch" style={{background:'#fef3f2'}}></div><div className="semantic-info"><div className="semantic-name">--ds-danger-subtle</div><div className="semantic-value">#fef3f2 · error-50</div><div className="semantic-desc">Subtle danger background</div></div></div>
+  <div className="semantic-card"><div className="semantic-swatch" style={{background:'#fee4e2'}}></div><div className="semantic-info"><div className="semantic-name">--ds-danger-light</div><div className="semantic-value">#fee4e2 · error-100</div><div className="semantic-desc">Light danger background</div></div></div>
+  <div className="semantic-card"><div className="semantic-swatch" style={{background:'#fecdca'}}></div><div className="semantic-info"><div className="semantic-name">--ds-danger-border</div><div className="semantic-value">#fecdca · error-200</div><div className="semantic-desc">Danger-tinted borders</div></div></div>
+  <div className="semantic-card"><div className="semantic-swatch" style={{background:'#b42318'}}></div><div className="semantic-info"><div className="semantic-name">--ds-danger-text</div><div className="semantic-value">#b42318</div><div className="semantic-desc">Danger text on light bg</div></div></div>
+</div>
+
+<div className="section-heading">Info / Blue</div>
+<div className="semantic-grid">
+  <div className="semantic-card"><div className="semantic-swatch" style={{background:'#0ba5ec'}}></div><div className="semantic-info"><div className="semantic-name">--ds-info</div><div className="semantic-value">#0ba5ec · info-500</div><div className="semantic-desc">Info solid</div></div></div>
+  <div className="semantic-card"><div className="semantic-swatch" style={{background:'#0989c5'}}></div><div className="semantic-info"><div className="semantic-name">--ds-info-dark</div><div className="semantic-value">#0989c5</div><div className="semantic-desc">Darker info</div></div></div>
+  <div className="semantic-card"><div className="semantic-swatch" style={{background:'#026aa2'}}></div><div className="semantic-info"><div className="semantic-name">--ds-info-darkest</div><div className="semantic-value">#026aa2</div><div className="semantic-desc">Darkest info, text on light bg</div></div></div>
+  <div className="semantic-card"><div className="semantic-swatch" style={{background:'#e0f2fe'}}></div><div className="semantic-info"><div className="semantic-name">--ds-info-subtle</div><div className="semantic-value">#e0f2fe · info-100</div><div className="semantic-desc">Subtle info background</div></div></div>
+  <div className="semantic-card"><div className="semantic-swatch" style={{background:'#bae8fd'}}></div><div className="semantic-info"><div className="semantic-name">--ds-info-light</div><div className="semantic-value">#bae8fd</div><div className="semantic-desc">Light info background</div></div></div>
+  <div className="semantic-card"><div className="semantic-swatch" style={{background:'#b9e6fe'}}></div><div className="semantic-info"><div className="semantic-name">--ds-info-border</div><div className="semantic-value">#b9e6fe · info-200</div><div className="semantic-desc">Info-tinted borders</div></div></div>
+  <div className="semantic-card"><div className="semantic-swatch" style={{background:'#026aa2'}}></div><div className="semantic-info"><div className="semantic-name">--ds-info-text</div><div className="semantic-value">#026aa2</div><div className="semantic-desc">Info text on light bg</div></div></div>
+</div>
+
+<div className="section-heading">Shadows & Overlays</div>
+<div className="semantic-grid">
+  <div className="semantic-card"><div className="semantic-swatch" style={{background:'#fff',boxShadow:'0 1px 3px rgba(16,24,40,.10), 0 1px 2px rgba(16,24,40,.06)'}}></div><div className="semantic-info"><div className="semantic-name">--ds-shadow-sm</div><div className="semantic-value">0 1px 3px …</div><div className="semantic-desc">Small shadow (cards, buttons)</div></div></div>
+  <div className="semantic-card"><div className="semantic-swatch" style={{background:'#fff',boxShadow:'0 4px 8px -2px rgba(16,24,40,.10), 0 2px 4px -2px rgba(16,24,40,.06)'}}></div><div className="semantic-info"><div className="semantic-name">--ds-shadow-md</div><div className="semantic-value">0 4px 8px …</div><div className="semantic-desc">Medium shadow (dropdowns)</div></div></div>
+  <div className="semantic-card"><div className="semantic-swatch" style={{background:'#fff',boxShadow:'0 12px 16px -4px rgba(16,24,40,.08), 0 4px 6px -2px rgba(16,24,40,.03)'}}></div><div className="semantic-info"><div className="semantic-name">--ds-shadow-lg</div><div className="semantic-value">0 12px 16px …</div><div className="semantic-desc">Large shadow (modals, popovers)</div></div></div>
+  <div className="semantic-card"><div className="semantic-swatch" style={{background:'rgba(52,64,84,0.70)'}}></div><div className="semantic-info"><div className="semantic-name">--ds-overlay</div><div className="semantic-value">rgba(52, 64, 84, 0.70)</div><div className="semantic-desc">Modal/dialog backdrop</div></div></div>
+</div>
+
+<div className="section-heading">Button — Primary</div>
+<div className="semantic-grid">
+  <div className="semantic-card"><div className="semantic-swatch" style={{background:'#29294c'}}></div><div className="semantic-info"><div className="semantic-name">--ds-btn-primary-bg</div><div className="semantic-value">#29294c · primary-500</div><div className="semantic-desc">Primary button background</div></div></div>
+  <div className="semantic-card"><div className="semantic-swatch" style={{background:'#ffffff',border:'1px solid #eaeaed'}}></div><div className="semantic-info"><div className="semantic-name">--ds-btn-primary-color</div><div className="semantic-value">#ffffff</div><div className="semantic-desc">Primary button text</div></div></div>
+  <div className="semantic-card"><div className="semantic-swatch" style={{background:'#29294c'}}></div><div className="semantic-info"><div className="semantic-name">--ds-btn-primary-border</div><div className="semantic-value">#29294c · primary-500</div><div className="semantic-desc">Primary button border</div></div></div>
+  <div className="semantic-card"><div className="semantic-swatch" style={{background:'#1e1e38'}}></div><div className="semantic-info"><div className="semantic-name">--ds-btn-primary-hover-bg</div><div className="semantic-value">#1e1e38</div><div className="semantic-desc">Primary button hover background</div></div></div>
+  <div className="semantic-card"><div className="semantic-swatch" style={{background:'#1e1e38'}}></div><div className="semantic-info"><div className="semantic-name">--ds-btn-primary-hover-border</div><div className="semantic-value">#1e1e38</div><div className="semantic-desc">Primary button hover border</div></div></div>
+</div>

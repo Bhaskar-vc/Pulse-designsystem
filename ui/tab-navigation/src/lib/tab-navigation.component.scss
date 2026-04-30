@@ -1,0 +1,60 @@
+.tab-navigation-wrapper {
+  @apply relative flex items-center gap-2;
+}
+
+.scroll-container {
+  @apply flex-1 overflow-x-auto scroll-smooth;
+  scroll-behavior: smooth;
+
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Hide scrollbar for Firefox */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  ul {
+    @apply inline-flex;
+  }
+}
+
+.scroll-arrow {
+  @apply flex-shrink-0 p-2 rounded transition-colors duration-200 text-gray-600  border-none cursor-pointer bg-transparent;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  // &:hover {
+  //   @apply bg-gray-100;
+  // }
+
+  // &:active {
+  //   @apply bg-gray-200;
+  // }
+}
+
+.scroll-arrow-left {
+  @apply order-first;
+}
+
+.scroll-arrow-right {
+  @apply order-last;
+}
+
+li {
+  &.label-size-sm {
+    @apply text-sm font-normal;
+  }
+
+  &.label-size-default {
+    @apply text-base font-normal;
+  }
+
+  &.tab-highlight {
+    @apply font-medium text-secondary-700 border-b-2 border-secondary-600 pb-[2px];
+  }
+}
