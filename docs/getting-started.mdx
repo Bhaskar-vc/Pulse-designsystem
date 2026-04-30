@@ -231,76 +231,315 @@ export const copy = (text) => (e) => {
         </div>
       </div>
 
-      {/* ── Components ── */}
+      {/* ── Layout ── */}
       <div className="home-section">
-        <div className="home-section-label">Components</div>
+        <div className="home-section-label">Layout</div>
         <div className="comp-grid">
+          <a className="comp-card" href="#" onClick={nav('layout-button--docs')}>
+            <div className="comp-card-icon-wrap"><svg width="18" height="18" viewBox="0 0 20 20" fill="none"><rect x="3" y="6" width="14" height="8" rx="3" stroke="currentColor" strokeWidth="1.5"/><path d="M7 10h6" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round"/></svg></div>
+            <div className="comp-card-name">Button</div>
+            <div className="comp-card-desc">Primary actions with variants, colors, sizes, and loading states</div>
+            <div className="comp-card-arrow">→</div>
+          </a>
+          <a className="comp-card" href="#" onClick={nav('layout-button-group--docs')}>
+            <div className="comp-card-icon-wrap"><svg width="18" height="18" viewBox="0 0 20 20" fill="none"><rect x="2" y="6" width="5" height="8" rx="1.5" stroke="currentColor" strokeWidth="1.3"/><rect x="7.5" y="6" width="5" height="8" rx="0" stroke="currentColor" strokeWidth="1.3"/><rect x="13" y="6" width="5" height="8" rx="1.5" stroke="currentColor" strokeWidth="1.3"/></svg></div>
+            <div className="comp-card-name">Button Group</div>
+            <div className="comp-card-desc">Group related buttons with shared styling</div>
+            <div className="comp-card-arrow">→</div>
+          </a>
+          <a className="comp-card" href="#" onClick={nav('layout-card--docs')}>
+            <div className="comp-card-icon-wrap"><svg width="18" height="18" viewBox="0 0 20 20" fill="none"><rect x="2" y="3" width="16" height="14" rx="3" stroke="currentColor" strokeWidth="1.5"/><path d="M2 8h16" stroke="currentColor" strokeWidth="1.2"/></svg></div>
+            <div className="comp-card-name">Card</div>
+            <div className="comp-card-desc">Content containers with media, overlays, and glass effects</div>
+            <div className="comp-card-arrow">→</div>
+          </a>
+          <a className="comp-card" href="#" onClick={nav('layout-card-3d--docs')}>
+            <div className="comp-card-icon-wrap"><svg width="18" height="18" viewBox="0 0 20 20" fill="none"><rect x="3" y="4" width="14" height="12" rx="2" stroke="currentColor" strokeWidth="1.5" transform="rotate(-3 10 10)"/><rect x="5" y="6" width="10" height="8" rx="1.5" stroke="currentColor" strokeWidth="1" opacity="0.4"/></svg></div>
+            <div className="comp-card-name">Card 3D</div>
+            <div className="comp-card-desc">Tilt-on-hover card with perspective and scale effects</div>
+            <div className="comp-card-arrow">→</div>
+          </a>
+          <a className="comp-card" href="#" onClick={nav('layout-carousel--docs')}>
+            <div className="comp-card-icon-wrap"><svg width="18" height="18" viewBox="0 0 20 20" fill="none"><rect x="4" y="4" width="12" height="12" rx="2" stroke="currentColor" strokeWidth="1.5"/><path d="M1 8v4M19 8v4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/></svg></div>
+            <div className="comp-card-name">Carousel</div>
+            <div className="comp-card-desc">Slide through content with indicators and controls</div>
+            <div className="comp-card-arrow">→</div>
+          </a>
+          <a className="comp-card" href="#" onClick={nav('layout-divider--docs')}>
+            <div className="comp-card-icon-wrap"><svg width="18" height="18" viewBox="0 0 20 20" fill="none"><line x1="2" y1="10" x2="18" y2="10" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/></svg></div>
+            <div className="comp-card-name">Divider</div>
+            <div className="comp-card-desc">Horizontal or vertical separators with optional titles</div>
+            <div className="comp-card-arrow">→</div>
+          </a>
+        </div>
+      </div>
 
+      {/* ── Form Controls ── */}
+      <div className="home-section">
+        <div className="home-section-label">Form Controls</div>
+        <div className="comp-grid">
+          <a className="comp-card" href="#" onClick={nav('form-controls-input--docs')}>
+            <div className="comp-card-icon-wrap"><svg width="18" height="18" viewBox="0 0 20 20" fill="none"><rect x="2" y="5" width="16" height="10" rx="2" stroke="currentColor" strokeWidth="1.5"/><path d="M5 10h1" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/><line x1="6" y1="7.5" x2="6" y2="12.5" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round"/></svg></div>
+            <div className="comp-card-name">Input</div>
+            <div className="comp-card-desc">Text field with labels, icons, prefixes, and validation</div>
+            <div className="comp-card-arrow">→</div>
+          </a>
+          <a className="comp-card" href="#" onClick={nav('form-controls-input-field--docs')}>
+            <div className="comp-card-icon-wrap"><svg width="18" height="18" viewBox="0 0 20 20" fill="none"><rect x="2" y="6" width="16" height="8" rx="2" stroke="currentColor" strokeWidth="1.5"/><path d="M5 10h1" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/><line x1="6" y1="8" x2="6" y2="12" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round"/></svg></div>
+            <div className="comp-card-name">Input Field</div>
+            <div className="comp-card-desc">Legacy text input with label, validation, icons, and tags</div>
+            <div className="comp-card-arrow">→</div>
+          </a>
+          <a className="comp-card" href="#" onClick={nav('form-controls-textarea--docs')}>
+            <div className="comp-card-icon-wrap"><svg width="18" height="18" viewBox="0 0 20 20" fill="none"><rect x="2" y="3" width="16" height="14" rx="2" stroke="currentColor" strokeWidth="1.5"/><path d="M5 7h10M5 10h7" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round"/></svg></div>
+            <div className="comp-card-name">Textarea</div>
+            <div className="comp-card-desc">Multi-line text input with character count and resize</div>
+            <div className="comp-card-arrow">→</div>
+          </a>
+          <a className="comp-card" href="#" onClick={nav('form-controls-checkbox--docs')}>
+            <div className="comp-card-icon-wrap"><svg width="18" height="18" viewBox="0 0 20 20" fill="none"><rect x="3" y="3" width="14" height="14" rx="3" stroke="currentColor" strokeWidth="1.5"/><path d="M6 10l3 3 5-6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg></div>
+            <div className="comp-card-name">Checkbox</div>
+            <div className="comp-card-desc">Single or group selection with indeterminate state</div>
+            <div className="comp-card-arrow">→</div>
+          </a>
+          <a className="comp-card" href="#" onClick={nav('form-controls-radio--docs')}>
+            <div className="comp-card-icon-wrap"><svg width="18" height="18" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="7" stroke="currentColor" strokeWidth="1.5"/><circle cx="10" cy="10" r="3" fill="currentColor"/></svg></div>
+            <div className="comp-card-name">Radio</div>
+            <div className="comp-card-desc">Radio group with vertical/horizontal layout and sizes</div>
+            <div className="comp-card-arrow">→</div>
+          </a>
+          <a className="comp-card" href="#" onClick={nav('form-controls-select--docs')}>
+            <div className="comp-card-icon-wrap"><svg width="18" height="18" viewBox="0 0 20 20" fill="none"><rect x="2" y="5" width="16" height="10" rx="2" stroke="currentColor" strokeWidth="1.5"/><path d="M13 8l-3 4-3-4" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round" fill="none"/></svg></div>
+            <div className="comp-card-name">Select</div>
+            <div className="comp-card-desc">Dropdown select with search, multi-select, and groups</div>
+            <div className="comp-card-arrow">→</div>
+          </a>
+          <a className="comp-card" href="#" onClick={nav('form-controls-autocomplete--docs')}>
+            <div className="comp-card-icon-wrap"><svg width="18" height="18" viewBox="0 0 20 20" fill="none"><circle cx="9" cy="9" r="5" stroke="currentColor" strokeWidth="1.5"/><path d="M13 13l4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/></svg></div>
+            <div className="comp-card-name">Autocomplete</div>
+            <div className="comp-card-desc">Search-as-you-type with filtered option list</div>
+            <div className="comp-card-arrow">→</div>
+          </a>
+          <a className="comp-card" href="#" onClick={nav('form-controls-dropdown--docs')}>
+            <div className="comp-card-icon-wrap"><svg width="18" height="18" viewBox="0 0 20 20" fill="none"><rect x="2" y="3" width="16" height="8" rx="2" stroke="currentColor" strokeWidth="1.5"/><path d="M12 7l-2 2.5L8 7" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round"/><path d="M5 14h10M5 17h7" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" opacity="0.5"/></svg></div>
+            <div className="comp-card-name">Dropdown</div>
+            <div className="comp-card-desc">Form dropdown with search, multi, and validation</div>
+            <div className="comp-card-arrow">→</div>
+          </a>
+          <a className="comp-card" href="#" onClick={nav('form-controls-dropdown-menu--docs')}>
+            <div className="comp-card-icon-wrap"><svg width="18" height="18" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="4" r="1.5" fill="currentColor"/><circle cx="10" cy="10" r="1.5" fill="currentColor"/><circle cx="10" cy="16" r="1.5" fill="currentColor"/></svg></div>
+            <div className="comp-card-name">Dropdown Menu</div>
+            <div className="comp-card-desc">Context menu with items, dividers, and labels</div>
+            <div className="comp-card-arrow">→</div>
+          </a>
+          <a className="comp-card" href="#" onClick={nav('form-controls-label--docs')}>
+            <div className="comp-card-icon-wrap"><svg width="18" height="18" viewBox="0 0 20 20" fill="none"><path d="M3 5h14M3 10h9" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/><circle cx="16" cy="10" r="2" stroke="currentColor" strokeWidth="1.3"/></svg></div>
+            <div className="comp-card-name">Label</div>
+            <div className="comp-card-desc">Form labels with required, optional, and tooltip</div>
+            <div className="comp-card-arrow">→</div>
+          </a>
+          <a className="comp-card" href="#" onClick={nav('form-controls-rating--docs')}>
+            <div className="comp-card-icon-wrap"><svg width="18" height="18" viewBox="0 0 20 20" fill="none"><path d="M10 2l2.5 5 5.5.8-4 3.9.9 5.3L10 14.5 5.1 17l.9-5.3-4-3.9L7.5 7z" stroke="currentColor" strokeWidth="1.3" strokeLinejoin="round" fill="currentColor" fillOpacity="0.2"/></svg></div>
+            <div className="comp-card-name">Rating</div>
+            <div className="comp-card-desc">Star rating with interactive and read-only modes</div>
+            <div className="comp-card-arrow">→</div>
+          </a>
           <a className="comp-card" href="#" onClick={nav('form-controls-toggle--docs')}>
-            <div className="comp-card-icon-wrap">
-              <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
-                <rect x="2" y="6" width="16" height="8" rx="4" stroke="currentColor" strokeWidth="1.5"/>
-                <circle cx="14" cy="10" r="2.5" fill="currentColor"/>
-              </svg>
-            </div>
+            <div className="comp-card-icon-wrap"><svg width="18" height="18" viewBox="0 0 20 20" fill="none"><rect x="2" y="6" width="16" height="8" rx="4" stroke="currentColor" strokeWidth="1.5"/><circle cx="14" cy="10" r="2.5" fill="currentColor"/></svg></div>
             <div className="comp-card-name">Toggle</div>
             <div className="comp-card-desc">On/off switch with label, sizes, and color variants</div>
             <div className="comp-card-arrow">→</div>
           </a>
-
-          <a className="comp-card" href="#" onClick={nav('form-controls-input-field--docs')}>
-            <div className="comp-card-icon-wrap">
-              <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
-                <rect x="2" y="6" width="16" height="8" rx="2" stroke="currentColor" strokeWidth="1.5"/>
-                <path d="M5 10h1" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
-                <line x1="6" y1="8" x2="6" y2="12" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round"/>
-              </svg>
-            </div>
-            <div className="comp-card-name">Input Field</div>
-            <div className="comp-card-desc">Text input with label, validation, icons, and tags</div>
+          <a className="comp-card" href="#" onClick={nav('form-controls-slider--docs')}>
+            <div className="comp-card-icon-wrap"><svg width="18" height="18" viewBox="0 0 20 20" fill="none"><line x1="2" y1="10" x2="18" y2="10" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/><circle cx="12" cy="10" r="3" stroke="currentColor" strokeWidth="1.5" fill="none"/></svg></div>
+            <div className="comp-card-name">Slider</div>
+            <div className="comp-card-desc">Range input with labels, values, and custom steps</div>
             <div className="comp-card-arrow">→</div>
           </a>
+          <a className="comp-card" href="#" onClick={nav('form-controls-segment--docs')}>
+            <div className="comp-card-icon-wrap"><svg width="18" height="18" viewBox="0 0 20 20" fill="none"><rect x="2" y="6" width="16" height="8" rx="3" stroke="currentColor" strokeWidth="1.5"/><rect x="3" y="7" width="5" height="6" rx="2" fill="currentColor" fillOpacity="0.2"/><line x1="8" y1="7" x2="8" y2="13" stroke="currentColor" strokeWidth="1" opacity="0.3"/><line x1="13" y1="7" x2="13" y2="13" stroke="currentColor" strokeWidth="1" opacity="0.3"/></svg></div>
+            <div className="comp-card-name">Segment</div>
+            <div className="comp-card-desc">Segmented control for switching between views</div>
+            <div className="comp-card-arrow">→</div>
+          </a>
+          <a className="comp-card" href="#" onClick={nav('form-controls-file-upload--docs')}>
+            <div className="comp-card-icon-wrap"><svg width="18" height="18" viewBox="0 0 20 20" fill="none"><path d="M10 13V3M6 7l4-4 4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/><path d="M3 13v3a1 1 0 001 1h12a1 1 0 001-1v-3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/></svg></div>
+            <div className="comp-card-name">File Upload</div>
+            <div className="comp-card-desc">Drag-and-drop, image, and standard file upload</div>
+            <div className="comp-card-arrow">→</div>
+          </a>
+          <a className="comp-card" href="#" onClick={nav('form-controls-upload--docs')}>
+            <div className="comp-card-icon-wrap"><svg width="18" height="18" viewBox="0 0 20 20" fill="none"><rect x="3" y="3" width="14" height="14" rx="3" stroke="currentColor" strokeWidth="1.5" strokeDasharray="3 2"/><path d="M10 7v6M7 10h6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/></svg></div>
+            <div className="comp-card-name">Upload</div>
+            <div className="comp-card-desc">Drop zone with file list, size limit, and validation</div>
+            <div className="comp-card-arrow">→</div>
+          </a>
+          <a className="comp-card" href="#" onClick={nav('form-controls-listbox--docs')}>
+            <div className="comp-card-icon-wrap"><svg width="18" height="18" viewBox="0 0 20 20" fill="none"><rect x="3" y="2" width="14" height="16" rx="2" stroke="currentColor" strokeWidth="1.5"/><path d="M6 6h8M6 10h8M6 14h5" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round"/></svg></div>
+            <div className="comp-card-name">Listbox</div>
+            <div className="comp-card-desc">Option list with single/multi select and search</div>
+            <div className="comp-card-arrow">→</div>
+          </a>
+          <a className="comp-card" href="#" onClick={nav('form-controls-calendar--docs')}>
+            <div className="comp-card-icon-wrap"><svg width="18" height="18" viewBox="0 0 20 20" fill="none"><rect x="2" y="4" width="16" height="14" rx="2" stroke="currentColor" strokeWidth="1.5"/><path d="M2 8h16" stroke="currentColor" strokeWidth="1.2"/><path d="M6 2v4M14 2v4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/></svg></div>
+            <div className="comp-card-name">Calendar</div>
+            <div className="comp-card-desc">Date picker with range mode and footer actions</div>
+            <div className="comp-card-arrow">→</div>
+          </a>
+          <a className="comp-card" href="#" onClick={nav('form-controls-date-range-picker--docs')}>
+            <div className="comp-card-icon-wrap"><svg width="18" height="18" viewBox="0 0 20 20" fill="none"><rect x="1" y="4" width="8" height="8" rx="1.5" stroke="currentColor" strokeWidth="1.3"/><rect x="11" y="4" width="8" height="8" rx="1.5" stroke="currentColor" strokeWidth="1.3"/><path d="M9 8h2" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round"/><path d="M5 2v3M15 2v3" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round"/></svg></div>
+            <div className="comp-card-name">Date Range Picker</div>
+            <div className="comp-card-desc">Dual-calendar range selector with presets</div>
+            <div className="comp-card-arrow">→</div>
+          </a>
+          <a className="comp-card" href="#" onClick={nav('form-controls-stepper--docs')}>
+            <div className="comp-card-icon-wrap"><svg width="18" height="18" viewBox="0 0 20 20" fill="none"><circle cx="4" cy="10" r="2.5" fill="currentColor"/><circle cx="10" cy="10" r="2.5" stroke="currentColor" strokeWidth="1.3"/><circle cx="16" cy="10" r="2.5" stroke="currentColor" strokeWidth="1.3" opacity="0.35"/><path d="M6.5 10h1M12.5 10h1" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round"/></svg></div>
+            <div className="comp-card-name">Stepper</div>
+            <div className="comp-card-desc">Multi-step wizard with horizontal/vertical layout</div>
+            <div className="comp-card-arrow">→</div>
+          </a>
+        </div>
+      </div>
 
+      {/* ── Data Display ── */}
+      <div className="home-section">
+        <div className="home-section-label">Data Display</div>
+        <div className="comp-grid">
+          <a className="comp-card" href="#" onClick={nav('data-display-table--docs')}>
+            <div className="comp-card-icon-wrap"><svg width="18" height="18" viewBox="0 0 20 20" fill="none"><rect x="2" y="3" width="16" height="14" rx="2" stroke="currentColor" strokeWidth="1.5"/><path d="M2 7h16M7 7v10M13 7v10" stroke="currentColor" strokeWidth="1.2"/></svg></div>
+            <div className="comp-card-name">Table</div>
+            <div className="comp-card-desc">Data table with sorting, selection, and variants</div>
+            <div className="comp-card-arrow">→</div>
+          </a>
+          <a className="comp-card" href="#" onClick={nav('data-display-pagination--docs')}>
+            <div className="comp-card-icon-wrap"><svg width="18" height="18" viewBox="0 0 20 20" fill="none"><path d="M4 10h12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/><circle cx="7" cy="10" r="2" fill="currentColor"/><circle cx="10" cy="10" r="1.5" stroke="currentColor" strokeWidth="1"/><circle cx="13" cy="10" r="1.5" stroke="currentColor" strokeWidth="1"/></svg></div>
+            <div className="comp-card-name">Pagination</div>
+            <div className="comp-card-desc">Page navigation with configurable page sizes</div>
+            <div className="comp-card-arrow">→</div>
+          </a>
+          <a className="comp-card" href="#" onClick={nav('data-display-progress--docs')}>
+            <div className="comp-card-icon-wrap"><svg width="18" height="18" viewBox="0 0 20 20" fill="none"><rect x="2" y="8" width="16" height="4" rx="2" stroke="currentColor" strokeWidth="1.3"/><rect x="2" y="8" width="10" height="4" rx="2" fill="currentColor" fillOpacity="0.3"/></svg></div>
+            <div className="comp-card-name">Progress</div>
+            <div className="comp-card-desc">Linear and circular progress with colors and animation</div>
+            <div className="comp-card-arrow">→</div>
+          </a>
+          <a className="comp-card" href="#" onClick={nav('data-display-stat--docs')}>
+            <div className="comp-card-icon-wrap"><svg width="18" height="18" viewBox="0 0 20 20" fill="none"><path d="M3 17V9M8 17V5M13 17V8M18 17V3" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/></svg></div>
+            <div className="comp-card-name">Stat</div>
+            <div className="comp-card-desc">Metric display with trends, icons, and descriptions</div>
+            <div className="comp-card-arrow">→</div>
+          </a>
+          <a className="comp-card" href="#" onClick={nav('data-display-tag--docs')}>
+            <div className="comp-card-icon-wrap"><svg width="18" height="18" viewBox="0 0 20 20" fill="none"><path d="M2 6a2 2 0 012-2h5l7 6-6 6-7-6V6z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round"/><circle cx="6" cy="8" r="1" fill="currentColor"/></svg></div>
+            <div className="comp-card-name">Tag</div>
+            <div className="comp-card-desc">Labels with variants, colors, dots, and dismiss</div>
+            <div className="comp-card-arrow">→</div>
+          </a>
           <a className="comp-card" href="#" onClick={nav('data-display-steps--docs')}>
-            <div className="comp-card-icon-wrap">
-              <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
-                <circle cx="4" cy="10" r="2.5" fill="currentColor"/>
-                <circle cx="10" cy="10" r="2.5" stroke="currentColor" strokeWidth="1.3"/>
-                <circle cx="16" cy="10" r="2.5" stroke="currentColor" strokeWidth="1.3" opacity="0.35"/>
-                <path d="M6.5 10h1M12.5 10h1" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round"/>
-              </svg>
-            </div>
+            <div className="comp-card-icon-wrap"><svg width="18" height="18" viewBox="0 0 20 20" fill="none"><circle cx="4" cy="10" r="2.5" fill="currentColor"/><circle cx="10" cy="10" r="2.5" stroke="currentColor" strokeWidth="1.3"/><circle cx="16" cy="10" r="2.5" stroke="currentColor" strokeWidth="1.3" opacity="0.35"/><path d="M6.5 10h1M12.5 10h1" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round"/></svg></div>
             <div className="comp-card-name">Steps</div>
             <div className="comp-card-desc">Multi-step progress with classic, pill, and dot variants</div>
             <div className="comp-card-arrow">→</div>
           </a>
-
-          <a className="comp-card" href="#" onClick={nav('navigation-tab-navigation--docs')}>
-            <div className="comp-card-icon-wrap">
-              <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
-                <path d="M2 16V4h16v12H2z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round"/>
-                <path d="M6 16V9M11 16V9M16 9H4" stroke="currentColor" strokeWidth="1.2"/>
-                <circle cx="4" cy="6.5" r="1" fill="currentColor"/>
-                <circle cx="8" cy="6.5" r="1" fill="currentColor" fillOpacity="0.4"/>
-                <circle cx="12" cy="6.5" r="1" fill="currentColor" fillOpacity="0.4"/>
-              </svg>
-            </div>
-            <div className="comp-card-name">Tab Navigation</div>
-            <div className="comp-card-desc">Navigation tabs with icons and badge support</div>
+          <a className="comp-card" href="#" onClick={nav('data-display-avatar--docs')}>
+            <div className="comp-card-icon-wrap"><svg width="18" height="18" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="8" r="4" stroke="currentColor" strokeWidth="1.5"/><path d="M3 18c0-3.87 3.13-7 7-7s7 3.13 7 7" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/></svg></div>
+            <div className="comp-card-name">Avatar</div>
+            <div className="comp-card-desc">User images with initials, sizes, and group stacking</div>
             <div className="comp-card-arrow">→</div>
           </a>
+          <a className="comp-card" href="#" onClick={nav('data-display-table-legacy--docs')}>
+            <div className="comp-card-icon-wrap"><svg width="18" height="18" viewBox="0 0 20 20" fill="none"><rect x="2" y="3" width="16" height="14" rx="2" stroke="currentColor" strokeWidth="1.5"/><path d="M2 7h16" stroke="currentColor" strokeWidth="1.2"/><path d="M7 7v10" stroke="currentColor" strokeWidth="1.2"/></svg></div>
+            <div className="comp-card-name">Table Legacy</div>
+            <div className="comp-card-desc">Legacy table with sorting and scrollable layout</div>
+            <div className="comp-card-arrow">→</div>
+          </a>
+        </div>
+      </div>
 
+      {/* ── Feedback ── */}
+      <div className="home-section">
+        <div className="home-section-label">Feedback</div>
+        <div className="comp-grid">
+          <a className="comp-card" href="#" onClick={nav('feedback-alert--docs')}>
+            <div className="comp-card-icon-wrap"><svg width="18" height="18" viewBox="0 0 20 20" fill="none"><path d="M10 3L2 17h16L10 3z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round"/><line x1="10" y1="8" x2="10" y2="12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/><circle cx="10" cy="14.5" r="0.75" fill="currentColor"/></svg></div>
+            <div className="comp-card-name">Alert</div>
+            <div className="comp-card-desc">Inline messages for info, success, warning, and error</div>
+            <div className="comp-card-arrow">→</div>
+          </a>
+          <a className="comp-card" href="#" onClick={nav('feedback-modal--docs')}>
+            <div className="comp-card-icon-wrap"><svg width="18" height="18" viewBox="0 0 20 20" fill="none"><rect x="1" y="1" width="18" height="18" rx="2" stroke="currentColor" strokeWidth="1" opacity="0.3"/><rect x="4" y="5" width="12" height="10" rx="2" stroke="currentColor" strokeWidth="1.5"/></svg></div>
+            <div className="comp-card-name">Modal</div>
+            <div className="comp-card-desc">Dialogs, drawers, and confirmation overlays</div>
+            <div className="comp-card-arrow">→</div>
+          </a>
+          <a className="comp-card" href="#" onClick={nav('feedback-tooltip--docs')}>
+            <div className="comp-card-icon-wrap"><svg width="18" height="18" viewBox="0 0 20 20" fill="none"><rect x="3" y="3" width="14" height="9" rx="2" stroke="currentColor" strokeWidth="1.5"/><path d="M8 12l2 3 2-3" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round"/></svg></div>
+            <div className="comp-card-name">Tooltip</div>
+            <div className="comp-card-desc">Hover tooltips with placements and color themes</div>
+            <div className="comp-card-arrow">→</div>
+          </a>
           <a className="comp-card" href="#" onClick={nav('feedback-tooltip-v2--docs')}>
-            <div className="comp-card-icon-wrap">
-              <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
-                <path d="M3 4a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2h-5l-3 3v-3H5a2 2 0 0 1-2-2V4z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round"/>
-              </svg>
-            </div>
+            <div className="comp-card-icon-wrap"><svg width="18" height="18" viewBox="0 0 20 20" fill="none"><path d="M3 4a2 2 0 012-2h10a2 2 0 012 2v7a2 2 0 01-2 2h-5l-3 3v-3H5a2 2 0 01-2-2V4z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round"/></svg></div>
             <div className="comp-card-name">Tooltip V2</div>
-            <div className="comp-card-desc">Contextual tooltips with hover/click triggers and placement</div>
+            <div className="comp-card-desc">Contextual tooltips with hover/click triggers</div>
             <div className="comp-card-arrow">→</div>
           </a>
+          <a className="comp-card" href="#" onClick={nav('feedback-spinner--docs')}>
+            <div className="comp-card-icon-wrap"><svg width="18" height="18" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="7" stroke="currentColor" strokeWidth="1.5" strokeDasharray="11 33" strokeLinecap="round"/></svg></div>
+            <div className="comp-card-name">Spinner</div>
+            <div className="comp-card-desc">Loading indicator with sizes, colors, and themes</div>
+            <div className="comp-card-arrow">→</div>
+          </a>
+          <a className="comp-card" href="#" onClick={nav('feedback-empty-state--docs')}>
+            <div className="comp-card-icon-wrap"><svg width="18" height="18" viewBox="0 0 20 20" fill="none"><rect x="3" y="3" width="14" height="14" rx="3" stroke="currentColor" strokeWidth="1.5" strokeDasharray="3 2"/><path d="M8 10h4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/></svg></div>
+            <div className="comp-card-name">Empty State</div>
+            <div className="comp-card-desc">Placeholder for empty views with illustration and action</div>
+            <div className="comp-card-arrow">→</div>
+          </a>
+          <a className="comp-card" href="#" onClick={nav('feedback-popover--docs')}>
+            <div className="comp-card-icon-wrap"><svg width="18" height="18" viewBox="0 0 20 20" fill="none"><rect x="3" y="2" width="14" height="11" rx="2" stroke="currentColor" strokeWidth="1.5"/><path d="M7 13l3 4 3-4" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round"/></svg></div>
+            <div className="comp-card-name">Popover</div>
+            <div className="comp-card-desc">Floating content panel with arrow and placements</div>
+            <div className="comp-card-arrow">→</div>
+          </a>
+        </div>
+      </div>
 
+      {/* ── Navigation ── */}
+      <div className="home-section">
+        <div className="home-section-label">Navigation</div>
+        <div className="comp-grid">
+          <a className="comp-card" href="#" onClick={nav('navigation-tabs--docs')}>
+            <div className="comp-card-icon-wrap"><svg width="18" height="18" viewBox="0 0 20 20" fill="none"><path d="M2 16V6h6l2-2h8v12H2z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round"/></svg></div>
+            <div className="comp-card-name">Tabs</div>
+            <div className="comp-card-desc">Content tabs with line, pills, and enclosed variants</div>
+            <div className="comp-card-arrow">→</div>
+          </a>
+          <a className="comp-card" href="#" onClick={nav('navigation-tab-navigation--docs')}>
+            <div className="comp-card-icon-wrap"><svg width="18" height="18" viewBox="0 0 20 20" fill="none"><path d="M2 16V4h16v12H2z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round"/><path d="M6 16V9M11 16V9M16 9H4" stroke="currentColor" strokeWidth="1.2"/><circle cx="4" cy="6.5" r="1" fill="currentColor"/><circle cx="8" cy="6.5" r="1" fill="currentColor" fillOpacity="0.4"/></svg></div>
+            <div className="comp-card-name">Tab Navigation</div>
+            <div className="comp-card-desc">Top-level page navigation tabs</div>
+            <div className="comp-card-arrow">→</div>
+          </a>
+          <a className="comp-card" href="#" onClick={nav('navigation-accordion--docs')}>
+            <div className="comp-card-icon-wrap"><svg width="18" height="18" viewBox="0 0 20 20" fill="none"><rect x="2" y="3" width="16" height="4" rx="1.5" stroke="currentColor" strokeWidth="1.3"/><rect x="2" y="8" width="16" height="4" rx="1.5" stroke="currentColor" strokeWidth="1.3"/><rect x="2" y="13" width="16" height="4" rx="1.5" stroke="currentColor" strokeWidth="1.3"/><path d="M14 5l2-1.5L14 2" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round"/></svg></div>
+            <div className="comp-card-name">Accordion</div>
+            <div className="comp-card-desc">Collapsible panels with icons, badges, and status</div>
+            <div className="comp-card-arrow">→</div>
+          </a>
+        </div>
+      </div>
+
+      {/* ── Utilities ── */}
+      <div className="home-section">
+        <div className="home-section-label">Utilities</div>
+        <div className="comp-grid">
+          <a className="comp-card" href="#" onClick={nav('utilities-toast--docs')}>
+            <div className="comp-card-icon-wrap"><svg width="18" height="18" viewBox="0 0 20 20" fill="none"><rect x="2" y="12" width="16" height="6" rx="2" stroke="currentColor" strokeWidth="1.5"/><path d="M5 15h7" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round"/><path d="M16 14l-1.5 1.5L16 17" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round"/></svg></div>
+            <div className="comp-card-name">Toast</div>
+            <div className="comp-card-desc">Non-blocking notifications with positions and auto-dismiss</div>
+            <div className="comp-card-arrow">→</div>
+          </a>
         </div>
       </div>
 
